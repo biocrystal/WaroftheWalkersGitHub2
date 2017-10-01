@@ -448,6 +448,27 @@
 		<multiply skill_level="9,10" value="0.0086,0.0068"/>
 	</effect>
 	</crafting_skill>
+	
+	<perk name="SkillMechanicClassBonusTradesman" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+	icon="science" description_key="SkillMechanicClassBonusTradesmanDesc" title_key="SkillMechanicClassBonusTradesman" group="crafting" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="Mechanic" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="TradesmanClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
+		</effect>
+	</perk>
 
 	<action_skill name="Pistols" exp_to_level="150" icon="pistol" description_key="pistolsDesc" title_key="pistols" group="firearms">
 		<effect name="EntityDamage">
@@ -651,6 +672,27 @@
 		</effect>
 	</perk>
 	
+	<perk name="SkillWeaponsClassBonusFighter" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+	icon="weapon_smithing" description_key="SkillWeaponsClassBonusFighterDesc" title_key="SkillWeaponsClassBonusFighter" group="weapons" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="craftSkillWeapons" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="FighterClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
+		</effect>
+	</perk>
+	
 	<perk name="macheteCraftingPerk" icon="ui_game_symbol_machete" description_key="macheteCraftingDesc" title_key="macheteCraftingName" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="4" group="weapons">
 		<requirement skill_level="1" required_skill_name="craftSkillWeapons" required_skill_level="7"/>
 		<recipe name="macheteBlade" unlock_level="1"/>
@@ -721,8 +763,40 @@
 		</effect>
 	</perk>
 	
-	<crafting_skill name="Advanced Tool Smithing" icon="ui_game_symbol_advancedtoolsmithing" description_key="toolSmithingDesc" 
+	<perk name="SkillToolsClassBonusTradesman" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+	icon="tool_smithing" description_key="SkillToolsClassBonusTradesmanDesc" title_key="SkillToolsClassBonusTradesman" group="tools" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="craftSkillTools" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="TradesmanClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
+		</effect>
+	</perk>
+	
+	<!-- Removed V5.1 -->
+	<!-- <crafting_skill name="Advanced Tool Smithing" icon="ui_game_symbol_advancedtoolsmithing" description_key="toolSmithingDesc" 
 	max_level="10" skill_point_cost_multiplier="1.26" skill_point_cost_per_level="3" exp_to_level="5000000" group="tools" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_player_level="20"/>
+		<requirement perk_level="2" required_player_level="40"/>
+		<requirement perk_level="3" required_player_level="50"/>
+		<requirement perk_level="4" required_player_level="60"/>
+		<requirement perk_level="5" required_player_level="70"/>
+		<requirement perk_level="6" required_player_level="80"/>
+		<requirement perk_level="7" required_player_level="90"/>
+		<requirement perk_level="8" required_player_level="100"/>
+		<requirement perk_level="9" required_player_level="120"/>
+		<requirement perk_level="10" required_player_level="140"/>
 	<effect name="CraftingTime">
 		<multiply skill_level="0,1" value="1.00,0.60"/>
 		<multiply skill_level="1,2" value="0.60,0.51"/>
@@ -775,7 +849,28 @@
 		<multiply skill_level="8,9" value="0.0108,0.0086"/>
 		<multiply skill_level="9,10" value="0.0086,0.0068"/>
 	</effect>
-	</crafting_skill>
+	</crafting_skill> -->
+	
+	<!-- <perk name="SkillAdvancedToolsClassBonusTradesman" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+	icon="tool_smithing" description_key="SkillAdvancedToolsClassBonusTradesmanDesc" title_key="SkillAdvancedToolsClassBonusTradesman" group="tools" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="craftSkillTools" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="TradesmanClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
+		</effect>
+	</perk> -->
 	
 	<crafting_skill name="Construction" description_key="ConstructionDesc" max_level="10" skill_point_cost_multiplier="1.26" 
 	skill_point_cost_per_level="3" exp_to_level="5000000" icon="ui_game_symbol_construction" group="tools" exp_gain_multiplier="0">
@@ -899,6 +994,27 @@
 		</effect>
 	</perk>
 	
+	<perk name="SkillGunsClassBonusMarksman" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+	icon="gunsmithing" description_key="SkillGunsClassBonusMarksmanDesc" title_key="SkillGunsClassBonusMarksman" group="firearms" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="craftSkillGuns" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="MarksmanClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
+		</effect>
+	</perk>
+	
 	<crafting_skill name="Ammo Crafting" description_key="AmmoCraftingDesc" max_level="10" skill_point_cost_multiplier="1.26"
 	skill_point_cost_per_level="3" exp_to_level="5000000" icon="ui_game_symbol_ammo_crafting" group="weapons" exp_gain_multiplier="0">
 	<effect name="CraftingTime">
@@ -954,18 +1070,6 @@
 	<perk name="762mm Round Crafting" icon="ui_game_symbol_762mmbullet" description_key="762mmRoundCraftingDesc" title_key="762mmRoundCrafting" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="3" group="firearms">
 		<requirement perk_level="1" required_skill_name="Ammo Crafting" required_skill_level="3"/>
 		<recipe name="762mmBullet" unlock_level="1"/>
-	</perk>
-	
-	<perk name="32mm Bullet Crafting" icon="ui_game_symbol_32mmbullet" description_key="32mmbulletcraftingDesc" max_level="1" skill_point_cost_per_level="5" group="weapons">
-		<requirement perk_level="1" required_skill_name="Ammo Crafting" required_skill_level="1"/>
-		<recipe name="32mmBullet" unlock_level="1"/>
-	</perk>
-
-	<perk name="556mm Bullet Crafting" icon="ui_game_symbol_556mmbullet" description_key="556mmbulletcraftingDesc" max_level="2" skill_point_cost_multiplier="0.5" skill_point_cost_per_level="10" group="weapons">
-		<requirement skill_level="2" required_player_level="90"/>
-		<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="4"/>
-		<recipe name="556mmBullet" unlock_level="1"/>
-		<recipe name="556mmNATOBullet" unlock_level="2"/>
 	</perk>
 	
 	<perk name="Rocket Recipe" icon="ui_game_symbol_rocket" max_level="1" skill_point_cost_per_level="10" group="weapons">
@@ -1037,6 +1141,27 @@
 			<multiply skill_level="7,8" value="0.0105,0.0084"/>
 			<multiply skill_level="8,9" value="0.0084,0.0067"/>
 			<multiply skill_level="9,10" value="0.0067,0.0053"/>
+		</effect>
+	</perk>
+	
+	<perk name="SkillScienceClassBonusScholar" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+	icon="science" description_key="SkillScienceClassBonusScholarDesc" title_key="SkillScienceClassBonusScholar" group="science" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="craftSkillScience" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="ScholarClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
 		</effect>
 	</perk>
 
@@ -1168,6 +1293,27 @@
 			<multiply skill_level="7,8" value="0.0136,0.0108"/>
 			<multiply skill_level="8,9" value="0.0108,0.0086"/>
 			<multiply skill_level="9,10" value="0.0086,0.0068"/>
+		</effect>
+	</perk>
+	
+	<perk name="SkillArmorClassBonusProtection" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" exp_to_level="5000000"
+		icon="ui_game_symbol_armor_iron" description_key="SkillArmorClassBonusProtectionDesc" title_key="SkillArmorClassBonusProtection" group="clothing" exp_gain_multiplier="0">
+		<requirement perk_level="1" required_skill_name="craftSkillArmor" required_skill_level="10"/>
+		<requirement perk_level="1" required_skill_name="ProtectionClassLevel3" required_skill_level="1"/>
+		<effect name="CraftingTime">
+			<multiply skill_level="1" value="0.45"/>
+			<multiply skill_level="2" value="0.40"/>
+			<multiply skill_level="3" value="0.30"/>
+		</effect>
+		<effect name="CraftingQuality">
+			<setvalue skill_level="1" value="525"/>
+			<setvalue skill_level="2" value="550"/>
+			<setvalue skill_level="3" value="600"/>
+		</effect>
+		<effect name="RepairTime">
+			<multiply skill_level="1" value="0.25"/>
+			<multiply skill_level="2" value="0.20"/>
+			<multiply skill_level="3" value="0.10"/>
 		</effect>
 	</perk>
 	
@@ -1387,10 +1533,12 @@
 
 <perk name="ScholarFarming" icon="ui_game_symbol_ScholarFarming" description_key="ScholarFarmingDesc" title_key="ScholarFarming" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="tools">
 	<recipe name="hoeIron" unlock_level="1"/>
-	<recipe name="wheatSeed" unlock_level="1"/>
+	<recipe name="plantedWheat1" unlock_level="1"/>
 	<recipe name="plantedYucca1" unlock_level="1"/>
 	<recipe name="plantedAloe1" unlock_level="1"/>
-	<recipe name="appleSeed" unlock_level="1"/>
+	<recipe name="plantedAppleTree1" unlock_level="1"/>
+	<recipe name="plantedBlackberry1" unlock_level="1"/>
+	<recipe name="plantedStrawberry1" unlock_level="1"/>
 	<recipe name="plantedMushroom1" unlock_level="1"/>
 </perk>
 
@@ -1682,16 +1830,6 @@
 	<recipe name="cobblestoneArrowSlitHalf" unlock_level="1"/>
 </perk> -->
 
-<perk name="Wrench Recipe" icon="ui_game_symbol_wrench1" description_key="WrenchRecipeDesc" max_level="1" skill_point_cost_per_level="2" group="tools">
-	<requirement skill_level="1" required_player_level="15"/>
-	<recipe name="wrench" unlock_level="1"/>
-</perk>
-
-<perk name="Hammer Recipe" icon="ui_game_symbol_clawhammer" description_key="HammerRecipeDesc" max_level="1" skill_point_cost_per_level="3" group="tools">
-	<requirement skill_level="1" required_player_level="20"/>
-	<recipe name="clawHammer" unlock_level="1"/>
-</perk>
-
 <!-- <perk name="HD Nailgun Recipe" icon="ui_game_symbol_nailgun" description_key="HDNailgunRecipeDesc" max_level="1" skill_point_cost_per_level="20" group="tools">
 	<requirement skill_level="1" required_player_level="60"/>
 	<requirement skill_level="1" required_skill_name="Tool Smithing" required_skill_level="75"/>
@@ -1955,16 +2093,6 @@
 	<recipe name="GreenTea" unlock_level="1"/>
 </perk>
 
-<!-- <perk name="Apple Juice Recipe" icon="ui_game_symbol_applejuice" description_key="AppleJuiceRecipeSkillDesc" max_level="1" skill_point_cost_per_level="5" group="health">
-	<requirement skill_level="1" required_player_level="20"/>
-	<recipe name="AppleJuice" unlock_level="1"/>
-</perk> -->
-
-<perk name="Mossy Brew Recipe" icon="ui_game_symbol_mossybrew" description_key="MossyBrewRecipeDesc" max_level="1" skill_point_cost_per_level="10" group="health">
-	<requirement skill_level="1" required_player_level="25"/>
-	<recipe name="MossyBrew" unlock_level="1"/>
-</perk>
-
 <!-- <perk name="Meat Stew Recipe" icon="science" max_level="1" skill_point_cost_per_level="5" group="health">
 	<requirement skill_level="1" required_player_level="15"/>
 	<recipe name="meatStew" unlock_level="1"/>
@@ -1975,19 +2103,9 @@
 	<recipe name="vegetableStew" unlock_level="1"/>
 </perk>
 
-<!-- <perk name="Apple Pie Recipe" icon="ui_game_symbol_applepie" description_key="ApplePieRecipeSkillDesc" max_level="1" skill_point_cost_per_level="5" group="health">
-	<requirement skill_level="1" required_player_level="20"/>
-	<recipe name="ApplePie" unlock_level="1"/>
-</perk> -->
-
 <perk name="Mushroom Bear Stew Recipe" icon="ui_game_symbol_stew" description_key="MushroomBearStewRecipeDesc" max_level="1" skill_point_cost_per_level="10" group="health">
 	<requirement skill_level="1" required_skill_level="30"/>
 	<recipe name="MushroomStew" unlock_level="1"/>
-</perk>
-
-<perk name="Fish Stew Recipe" icon="ui_game_symbol_stew" description_key="FishStewRecipeSkillDesc" max_level="1" skill_point_cost_per_level="10" group="health">
-	<requirement skill_level="1" required_player_level="15"/>
-	<recipe name="FishStew" unlock_level="1"/>
 </perk>
 
 <perk name="Repair Kit" icon="tool_smithing" description_key="RepairKitDesc" max_level="1" skill_point_cost_per_level="5" group="crafting">
@@ -1997,7 +2115,7 @@
 
 <perk name="Spotlight" icon="ui_game_symbol_spotlight" description_key="SpotlightDesc" max_level="1" skill_point_cost_per_level="5" group="crafting">
 	<requirement perk_level="1" required_skill_name="TradesmanClassLevel1" required_skill_level="1" />
-	<recipe name="spotlight" unlock_level="1"/>
+	<recipe name="spotlightPlayer" unlock_level="1"/>
 </perk>
 
 <perk name="Vault Door" icon="ui_game_symbol_vaultdoor" description_key="VaultDoorDesc" max_level="1" skill_point_cost_per_level="10" group="crafting">
@@ -2046,23 +2164,16 @@
 	<recipe name="ShovelTungsten" unlock_level="1"/>
 </perk>
 
-<perk name="Explosives" icon="ui_game_symbol_explosion" description_key="ExplosivesDesc" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" group="tools">
+<!-- <perk name="Explosives" icon="ui_game_symbol_explosion" description_key="ExplosivesDesc" max_level="3" skill_point_cost_multiplier="1" skill_point_cost_per_level="5" group="tools">
 	<requirement skill_level="1" required_skill_name="ScholarClassLevel2" required_skill_level="1"/>
 	<recipe name="pipeBomb" unlock_level="1"/>
 	<recipe name="dynamite" unlock_level="2"/>
 	<recipe name="tnt" unlock_level="3"/>
-</perk>
+</perk> -->
 
 <perk name="Mortar and Pestle" icon="ui_game_symbol_mortarandpestle" description_key="MortarandPestleSkillDesc" max_level="1" skill_point_cost_per_level="5" group="crafting">
 	<requirement skill_level="1" required_player_level="1"/>
 	<recipe name="MortarandPestle" unlock_level="1"/>
-</perk>
-
-<perk name="Auger Recipe" icon="ui_game_symbol_auger" description_key="AugerRecipeDesc" max_level="1" skill_point_cost_per_level="5" group="tools">
-	<requirement skill_level="1" required_player_level="5"/>
-	<recipe name="auger" unlock_level="1"/>
-	<recipe name="partsAuger_parts" unlock_level="1"/>
-	<recipe name="partsAuger_blade" unlock_level="1"/>
 </perk>
 
 <perk name="ECO Auger Recipe" icon="ui_game_symbol_auger" description_key="ECOAugerRecipeDesc" max_level="1" skill_point_cost_per_level="5" group="tools">
@@ -2077,13 +2188,6 @@
 	<recipe name="HDAuger" unlock_level="1"/>
 	<recipe name="HDAuger_Parts" unlock_level="1"/>
 	<recipe name="HDAuger_Blade" unlock_level="1"/>
-</perk>
-
-<perk name="Chainsaw Recipe" icon="ui_game_symbol_chainsaw" description_key="ChainsawRecipeDesc" max_level="1" skill_point_cost_per_level="5" group="tools">
-	<requirement skill_level="1" required_player_level="5"/>
-	<recipe name="chainsaw" unlock_level="1"/>
-	<recipe name="partsChainsaw_parts" unlock_level="1"/>
-	<recipe name="partsChainsaw_blade" unlock_level="1"/>
 </perk>
 
 <perk name="ECO Chainsaw Recipe" icon="ui_game_symbol_chainsaw" description_key="ECOChainsawRecipeDesc" max_level="1" skill_point_cost_per_level="5" group="tools">
@@ -2204,6 +2308,464 @@
 <perk name="ProtectionClassLevel3" icon="ui_game_symbol_classProtection3" description_key="ProtectionClassLevel3Desc" title_key="ProtectionClassLevel3" max_level="1" skill_point_cost_per_level="0" skill_point_cost_multiplier="0" group="crafting">
 	<requirement skill_level="1" required_skill_name="ProtectionClassLevel2" required_skill_level="1"/>
 </perk>
+
+<!-- Schematics -->
+
+<perk name="clubSpikedSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="clubSpikedSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="clubSpiked" unlock_level="1"/>
+</perk>
+
+<perk name="sledgehammerSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="sledgehammerSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="sledgehammer" unlock_level="1"/>
+</perk>
+
+<perk name="huntingKnifeBookPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="huntingKnifeBookPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="huntingKnife" unlock_level="1"/>
+</perk>
+
+<perk name="beerBookPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="beerBookPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="plantedHop1" unlock_level="1"/>
+		<recipe name="beer" unlock_level="1"/>
+		<recipe name="signShopColdBeer" unlock_level="1"/>
+</perk>
+
+<perk name="compoundBowSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="compoundBowSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="compoundBow" unlock_level="1"/>
+</perk>
+
+<perk name="crossbowSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="crossbowSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="crossbow" unlock_level="1"/>
+</perk>
+
+<perk name="pistolBookPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="pistolBookPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunPistol" unlock_level="1"/>
+</perk>
+
+<perk name="theEnforcerMagazinePerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="theEnforcerMagazinePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gun44Magnum" unlock_level="1"/>
+</perk>
+
+<perk name="pumpShotgunSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="pumpShotgunSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunPumpShotgun" unlock_level="1"/>
+		<recipe name="gunSawedOffPumpShotgun" unlock_level="1"/>
+</perk>
+
+<perk name="smgSchematicsPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="smgSchematicsPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunMP5" unlock_level="1"/>
+</perk>
+
+<perk name="ak47SchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ak47SchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunAK47" unlock_level="1"/>
+</perk>
+
+<perk name="huntingRifleSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="huntingRifleSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunHuntingRifle" unlock_level="1"/>
+</perk>
+
+<perk name="sniperRifleSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="sniperRifleSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunSniperRifle" unlock_level="1"/>
+</perk>
+
+<perk name="rocketLauncherSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="rocketLauncherSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gunRocketLauncher" unlock_level="1"/>
+		<recipe name="rocket" unlock_level="1"/>
+		<recipe name="rocketCasing" unlock_level="1"/>
+		<recipe name="rocketTip" unlock_level="1"/>
+</perk>
+
+<perk name="nailgunSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="nailgunSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="nailgun" unlock_level="1"/>
+</perk>
+
+<perk name="flamingArrowSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="flamingArrowSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="flamingArrow" unlock_level="1"/>
+</perk>
+
+<perk name="explodingCrossbowBoltSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="explodingCrossbowBoltSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="explodingCrossbowBolt" unlock_level="1"/>
+</perk>
+
+<perk name="explodingCrossbowBoltSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="explodingCrossbowBoltSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="explodingCrossbowBolt" unlock_level="1"/>
+</perk>
+
+<perk name="Wrench Recipe" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="wrenchSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="wrench" unlock_level="1"/>
+</perk>
+
+<perk name="Hammer Recipe" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="clawHammerSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="clawHammer" unlock_level="1"/>
+</perk>
+
+<perk name="gasCanSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="gasCanSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="gasCan" unlock_level="1"/>
+</perk>
+
+<perk name="augerSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="augerSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="auger" unlock_level="1"/>
+		<recipe name="partsAuger_parts" unlock_level="1"/>
+		<recipe name="partsAuger_blade" unlock_level="1"/>
+</perk>
+
+<perk name="chainsawSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="chainsawSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="chainsaw" unlock_level="1"/>
+		<recipe name="partsChainsaw_parts" unlock_level="1"/>
+		<recipe name="partsChainsaw_blade" unlock_level="1"/>
+</perk>
+
+<perk name="firstAidKitSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="firstAidKitSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="firstAidKit" unlock_level="1"/>
+</perk>
+
+<perk name="herbalAntibioticsRecipePerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="herbalAntibioticsRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="herbalAntibiotics" unlock_level="1"/>
+</perk>
+
+<perk name="minibikesForDumbshitsPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="minibikesForDumbshitsPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="minibikeChassis" unlock_level="1"/>
+		<recipe name="minibikeSeat" unlock_level="1"/>
+		<recipe name="minibikeHandlebars" unlock_level="1"/>
+</perk>
+
+<perk name="leatherBootsSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="leatherBootsSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="leatherBoots" unlock_level="1"/>
+</perk>
+
+<perk name="leatherPantsSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="leatherPantsSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="leatherPants" unlock_level="1"/>
+</perk>
+
+<perk name="leatherJacketSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="leatherJacketSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="leatherJacket" unlock_level="1"/>
+</perk>
+
+<perk name="leatherHoodSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="leatherHoodSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="leatherHood" unlock_level="1"/>
+</perk>
+
+<perk name="leatherGlovesSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="leatherGlovesSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="leatherGloves" unlock_level="1"/>
+</perk>
+
+<perk name="scrapBootsSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="scrapBootsSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="scrapBoots" unlock_level="1"/>
+</perk>
+
+<perk name="scrapLegArmorSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="scrapLegArmorSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="scrapLegArmor" unlock_level="1"/>
+</perk>
+
+<perk name="scrapChestArmorSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="scrapChestArmorSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="scrapChestArmor" unlock_level="1"/>
+</perk>
+
+<perk name="scrapHelmetSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="scrapHelmetSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="scrapHelmet" unlock_level="1"/>
+</perk>
+
+<perk name="scrapGlovesSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="scrapGlovesSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="scrapGloves" unlock_level="1"/>
+</perk>
+
+<perk name="ironHelmetSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ironHelmetSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ironHelmet" unlock_level="1"/>
+</perk>
+
+<perk name="ironChestArmorSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ironChestArmorSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ironChestArmor" unlock_level="1"/>
+</perk>
+
+<perk name="ironLegArmorSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ironLegArmorSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ironLegArmor" unlock_level="1"/>
+</perk>
+
+<perk name="ironBootsSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ironBootsSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ironBoots" unlock_level="1"/>
+</perk>
+
+<perk name="ironGlovesSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ironGlovesSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ironGloves" unlock_level="1"/>
+</perk>
+
+<perk name="32mm Bullet Crafting" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="32mmBulletSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="32mmBullet" unlock_level="1"/>
+</perk>
+
+<perk name="44HollowPointMagBulletSchematicsPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="44HollowPointMagBulletSchematicsPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="44HollowPointMagBullet" unlock_level="1"/>
+</perk>
+
+<perk name="HollowPointAmmunitionBookPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="HollowPointAmmunitionBookPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="HollowPointBulletTip" unlock_level="1"/>
+</perk>
+
+<perk name="556mm Bullet Crafting" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="556mmBulletSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="4"/>
+		<recipe name="556mmBullet" unlock_level="1"/>
+	</perk>
+
+<perk name="556mmNATOBulletSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="556mmNATOBulletSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="5"/>
+		<recipe name="556mmNATOBullet" unlock_level="1"/>
+</perk>
+
+<perk name="762mmHollowPointBulletSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="762mmHollowPointBulletSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="6"/>
+		<recipe name="762mmHollowPointBullet" unlock_level="1"/>
+</perk>
+
+<perk name="9mmHollowPointBulletSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="9mmHollowPointBulletSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="3"/>
+		<recipe name="9mmHollowPointBullet" unlock_level="1"/>
+</perk>
+
+<perk name="TungstenArrowHeadSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TungstenArrowHeadSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="5"/>
+		<recipe name="TungstenArrowHead" unlock_level="1"/>
+</perk>
+
+<perk name="ExplodingTungstenArrowSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ExplodingTungstenArrowSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="5"/>
+		<recipe name="ExplodingTungstenArrow" unlock_level="1"/>
+</perk>
+
+<perk name="FlamingTungstenCrossbowBoltSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="FlamingTungstenCrossbowBoltSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+	<requirement skill_level="1" required_skill_name="Ammo Crafting" required_skill_level="7"/>
+		<recipe name="FlamingTungstenCrossbowBolt" unlock_level="1"/>
+</perk>
+
+<perk name="SteelCrossbowSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="SteelCrossbowSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="SteelCrossbow" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringBandanaPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringBandanaPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="bandana" unlock_level="1"/>
+		<recipe name="bandanaRed" unlock_level="1"/>
+		<recipe name="bandanaBlue" unlock_level="1"/>
+		<recipe name="bandanaGreen" unlock_level="1"/>
+		<recipe name="bandanaBrown" unlock_level="1"/>
+		<recipe name="bandanaBlack" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringSkullCapPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringSkullCapPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="skullCap" unlock_level="1"/>
+		<recipe name="skullCapRed" unlock_level="1"/>
+		<recipe name="skullCapGreen" unlock_level="1"/>
+		<recipe name="skullCapBlue" unlock_level="1"/>
+		<recipe name="skullCapBrown" unlock_level="1"/>
+		<recipe name="skullCapBlack" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringFaceMaskPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringFaceMaskPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="FaceMask" unlock_level="1"/>
+		<recipe name="FaceMaskRed" unlock_level="1"/>
+		<recipe name="FaceMaskGreen" unlock_level="1"/>
+		<recipe name="FaceMaskBlue" unlock_level="1"/>
+		<recipe name="FaceMaskBrown" unlock_level="1"/>
+		<recipe name="FaceMaskBlack" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringDenimPantsPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringDenimPantsPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="denimPants" unlock_level="1"/>
+		<recipe name="blackDenimPants" unlock_level="1"/>
+		<recipe name="redDenimPants" unlock_level="1"/>
+		<recipe name="brownDenimPants" unlock_level="1"/>
+		<recipe name="BlueDenimPants" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringFlannelPantsPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringFlannelPantsPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="FlannelPants" unlock_level="1"/>
+		<recipe name="BlackFlannelPants" unlock_level="1"/>
+		<recipe name="WhiteFlannelPants" unlock_level="1"/>
+		<recipe name="RedFlannelPants" unlock_level="1"/>
+		<recipe name="GreenFlannelPants" unlock_level="1"/>
+		<recipe name="GreyFlannelPants" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringShirtPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringShirtPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="shirt" unlock_level="1"/>
+		<recipe name="shirtRed" unlock_level="1"/>
+		<recipe name="shirtBrown" unlock_level="1"/>
+		<recipe name="shirtGreen" unlock_level="1"/>
+		<recipe name="shirtBlue" unlock_level="1"/>
+		<recipe name="shirtBlack" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringTankTopPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringTankTopPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="tankTopWhite" unlock_level="1"/>
+		<recipe name="tankTopRed" unlock_level="1"/>
+		<recipe name="tankTopPurple" unlock_level="1"/>
+		<recipe name="tankTopGreen" unlock_level="1"/>
+		<recipe name="tankTopBlue" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringSweatShirtPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringSweatShirtPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="sweatshirt" unlock_level="1"/>
+		<recipe name="sweatshirtRed" unlock_level="1"/>
+		<recipe name="sweatshirtBrown" unlock_level="1"/>
+		<recipe name="sweatshirtGreen" unlock_level="1"/>
+		<recipe name="sweatshirtBlue" unlock_level="1"/>
+		<recipe name="sweatshirtBlack" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringTShirtPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringTShirtPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="tshirtWhite" unlock_level="1"/>
+		<recipe name="tshirtRed" unlock_level="1"/>
+		<recipe name="tshirtBrown" unlock_level="1"/>
+		<recipe name="tshirtGreen" unlock_level="1"/>
+		<recipe name="tshirtBlue" unlock_level="1"/>
+		<recipe name="tshirtBlack" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringCowboyHatPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringCowboyHatPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="cowboyHat" unlock_level="1"/>
+		<recipe name="blackCowboyHat" unlock_level="1"/>
+</perk>
+
+<perk name="TailoringBallCapPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TailoringBallCapPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ballCap" unlock_level="1"/>
+		<recipe name="BlueBallCap" unlock_level="1"/>
+		<recipe name="BlackBallCap" unlock_level="1"/>
+		<recipe name="YellowBallCap" unlock_level="1"/>
+		<recipe name="GreenBallCap" unlock_level="1"/>
+</perk>
+
+<perk name="SteelMacheteSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="SteelMacheteSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="SteelMachete" unlock_level="1"/>
+</perk>
+
+<perk name="BreadRecipePerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="BreadRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="Bread" unlock_level="1"/>
+		<recipe name="Dough" unlock_level="1"/>
+		<recipe name="Flour" unlock_level="1"/>
+</perk>
+
+<perk name="FishingBookPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="FishingBookPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="FishingPole" unlock_level="1"/>
+		<recipe name="FishingPoleBated" unlock_level="1"/>
+</perk>
+
+<perk name="Fish Stew Recipe" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="FishStewRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="FishStew" unlock_level="1"/>
+</perk>
+
+<perk name="FireTrapSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="FireTrapSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="FireTrap" unlock_level="1"/>
+</perk>
+
+<perk name="SettingTheTrapPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="SettingTheTrapPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="RabbitTrap(Unbaited)" unlock_level="1"/>
+		<recipe name="RabbitTrap(Baited)" unlock_level="1"/>
+</perk>
+
+<perk name="TNTBookPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="TNTBookPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="tnt" unlock_level="1"/>
+		<recipe name="dynamite" unlock_level="1"/>
+		<recipe name="pipeBomb" unlock_level="1"/>
+</perk>
+
+<!-- Class Only -->
+<perk name="Apple Pie Recipe" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="ApplePieRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="ApplePie" unlock_level="1"/>
+</perk>
+
+<!-- Class Only -->
+<perk name="Apple Juice Recipe" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="AppleJuiceRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="AppleJuice" unlock_level="1"/>
+</perk>
+
+<perk name="RoastedMeatPieRecipePerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="RoastedMeatPieRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="RoastedMeatPie" unlock_level="1"/>
+</perk>
+
+<perk name="Mossy Brew Recipe" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="MossyBrewPieRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="MossyBrew" unlock_level="1"/>
+</perk>
+
+<perk name="MushroomStewRecipePerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="MushroomStewRecipePerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="MushroomStew" unlock_level="1"/>
+</perk>
+
+<perk name="steelClawHammerSchematicPerk" icon="ui_game_symbol_schematic" description_key="schematicPerkGroupDesc" title_key="steelClawHammerSchematicPerk" max_level="1" skill_point_cost_multiplier="0" skill_point_cost_per_level="0" group="painting">
+	<requirement skill_level="0" required_skill_name="craftSkillMiscellaneous" required_skill_level="0"/>
+		<recipe name="steelClawHammer" unlock_level="1"/>
+</perk>
+
 
 <!--
 	<perk name="Test1" icon="paint_bucket"  max_level="5" skill_point_cost_multiplier="1.4" skill_point_cost_per_level="5" group="tools">

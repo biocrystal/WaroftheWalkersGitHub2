@@ -1494,7 +1494,7 @@ Mesh files no longer used:
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Repair"/>
 		<property name="Delay" value="0.4"/>
-		<property name="Repair_amount" value="100"/>
+		<property name="Repair_amount" value="50"/>
 		<property name="Upgrade_hit_offset" value="0"/>
 		<property name="Sound_start" value="repair_block"/>
 		<property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers"/>
@@ -1860,7 +1860,8 @@ Mesh files no longer used:
 		<property name="Repair_amount" value="350"/>
 		<property name="Upgrade_hit_offset" value="-2"/>
 		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,gasCan"/>
+		<!-- <property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,gasCan"/> -->
+		<property name="Restricted_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,gasCan"/>
 	</property>
 	<property class="Attributes">
 		<property name="EntityDamage" value="4,10"/>
@@ -1906,8 +1907,8 @@ Mesh files no longer used:
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Repair"/>
 		<property name="Delay" value="0.5"/>
-		<property name="Repair_amount" value="250"/>
-		<property name="Upgrade_hit_offset" value="-3"/>
+		<property name="Repair_amount" value="150"/>
+		<property name="Upgrade_hit_offset" value="-2"/>
 		<property name="Sound_start" value="repair_block"/>
 		<property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,nail,gasCan"/>
 	</property>
@@ -1964,8 +1965,8 @@ Mesh files no longer used:
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Repair"/>
 		<property name="Delay" value="0.25"/>
-		<property name="Repair_amount" value="250"/>
-		<property name="Upgrade_hit_offset" value="-3"/>
+		<property name="Repair_amount" value="350"/>
+		<property name="Upgrade_hit_offset" value="-4"/>
 		<property name="Repair_action_sound" value="nailgun_fire"/>
 		<property name="Upgrade_action_sound" value="nailgun_fire"/>
 		<property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,nail,gasCan"/>
@@ -2406,14 +2407,14 @@ Mesh files no longer used:
 	<property class="Attributes">
 		<property name="GetQualityFromWeapon" value="true"/>
 		<property name="EntityDamage" value="250,500"/>
-		<property name="BlockDamage" value="50,200"/> <!-- this is not working yet, it uses damage from Action1 -->
+		<property name="BlockDamage" value="100,300"/> <!-- this is not working yet, it uses damage from Action1 -->
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="Explosion.ParticleIndex" value="4"/> <!-- which Prefab/particle is used -->
-		<property name="Explosion.RadiusBlocks" value="5"/> <!-- damage radius for blocks -->
-		<property name="Explosion.BlockDamage" value="500"/> <!-- damage for blocks in the center of the explosion -->
-		<property name="Explosion.RadiusEntities" value="5"/> <!-- damage radius for entities -->
+		<property name="Explosion.RadiusBlocks" value="8"/> <!-- damage radius for blocks -->
+		<property name="Explosion.BlockDamage" value="800"/> <!-- damage for blocks in the center of the explosion -->
+		<property name="Explosion.RadiusEntities" value="6"/> <!-- damage radius for entities -->
 		<property name="Explosion.EntityDamage" value="350"/> <!-- damage for entities in the center of the explosion. Zombies take 2x this damage. -->
 		<property name="Velocity" value="50"/>
 		<property name="FlyTime" value="1.2"/>
@@ -3282,7 +3283,7 @@ Mesh files no longer used:
 	<property name="Weight" value="45"/>
 	<property class="Attributes">
 		<property name="EntityDamage" value="25,42"/>
-		<property name="EntityDamage" value="54,90"/> <!-- xxx is this working? -->
+		<property name="EntityDamage" value="90,145"/> <!-- xxx is this working? -->
 		<property name="DegradationMax" value="5000,10000"/>
 	</property>
 	<property name="EconomicValue" value="1500"/>
@@ -3449,8 +3450,8 @@ Mesh files no longer used:
 	<property name="Weight" value="10"/>
 	<property name="EconomicValue" value="250"/>
 	<property class="Attributes">
-		<property name="VehicleStorageWidth" value="3,8"/>
-		<property name="VehicleStorageHeight" value="3,5"/>
+		<property name="VehicleStorageWidth" value="8,8"/>
+		<property name="VehicleStorageHeight" value="14,14"/>
 		<property name="DegradationMax" value="1200,6000"/>
 	</property>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -6574,7 +6575,7 @@ Mesh files no longer used:
 	<property name="Meshfile" value="Items/Food/yucca_juicePrefab"/>
 	<property name="Material" value="organic"/>
 	<property name="HoldType" value="3"/>
-	<property name="Stacknumber" value="25"/> <!-- STK drink -->
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
 	<property name="EconomicValue" value="36"/>
 	<property class="Action1">
 		<property name="Class" value="Eat"/>
@@ -7337,7 +7338,7 @@ Mesh files no longer used:
 	<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
 	<property name="Material" value="glass"/>
 	<property name="HoldType" value="3"/>
-	<property name="Stacknumber" value="25"/> <!-- STK drink -->
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
 	<property name="Weight" value="10"/>
 	<property name="EconomicValue" value="30"/>
 	<property name="CraftingIngredientTime" value="15"/>
@@ -7377,7 +7378,7 @@ Mesh files no longer used:
 	<property name="Material" value="glass"/>
 	<property name="HoldType" value="3"/>
 	<property name="Weight" value="10"/>
-	<property name="Stacknumber" value="25"/> <!-- STK drink -->
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
 	<property name="EconomicValue" value="34"/>
 	<property class="Action1">
 		<property name="Class" value="Eat"/>
@@ -7400,7 +7401,7 @@ Mesh files no longer used:
 	<property name="Material" value="glass"/>
 	<property name="HoldType" value="3"/>
 	<property name="Weight" value="10"/>
-	<property name="Stacknumber" value="25"/> <!-- STK drink -->
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
 	<property name="EconomicValue" value="36"/>
 	<property class="Action1">
 		<property name="Class" value="Eat"/>
@@ -7442,7 +7443,7 @@ Mesh files no longer used:
 	<property name="Material" value="organic"/>
 	<property name="HoldType" value="3"/>
 	<property name="Weight" value="10"/>
-	<property name="Stacknumber" value="25"/> <!-- STK drink -->
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
 	<property name="EconomicValue" value="34"/>
 	<property class="Action1">
 		<property name="Class" value="Eat"/>
@@ -7465,7 +7466,7 @@ Mesh files no longer used:
 	<property name="Material" value="glass"/>
 	<property name="HoldType" value="3"/>
 	<property name="Weight" value="10"/>
-	<property name="Stacknumber" value="25"/> <!-- STK drink -->
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
 	<property name="EconomicValue" value="100"/>
 	<property class="Action1">
 		<property name="Class" value="Eat"/>
@@ -7510,7 +7511,7 @@ Mesh files no longer used:
 <item id="900" name="schematicMaster">
 	<property name="CreativeMode" value="None"/>
 	<property name="Meshfile" value="Items/Misc/Book"/>
-	<property name="Material" value="paper"/>
+	<property name="Material" value="BlueprintPaper"/>
 	<property name="HoldType" value="21"/>
 	<property name="Weight" value="5"/>
 	<property name="FuelValue" value="5"/>
@@ -7543,8 +7544,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="clubSpiked"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
+		<!-- <property name="Recipes_to_learn" value="clubSpiked"/> -->
+		<property name="Skills_to_gain" value="clubSpikedSchematicPerk"/>
 	</property>
 </item>
 
@@ -7552,24 +7553,24 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="sledgehammer"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
+		<!-- <property name="Recipes_to_learn" value="sledgehammer"/> -->
+		<property name="Skills_to_gain" value="sledgehammerSchematicPerk"/>
 	</property>
 </item>
 
 <item id="912" name="huntingKnifeBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="huntingKnife"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
+		<!-- <property name="Recipes_to_learn" value="huntingKnife"/> -->
+		<property name="Skills_to_gain" value="huntingKnifeBookPerk"/>
 	</property>
 </item>
 
 <item id="913" name="beerBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="plantedHop1,beer,signShopColdBeer"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="plantedHop1,beer,signShopColdBeer"/> -->
+		<property name="Skills_to_gain" value="beerBookPerk"/>
 	</property>
 </item>
 
@@ -7577,8 +7578,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="compoundBow"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
+		<!-- <property name="Recipes_to_learn" value="compoundBow"/> -->
+		<property name="Skills_to_gain" value="compoundBowSchematicPerk"/>
 	</property>
 </item>
 
@@ -7586,16 +7587,16 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="crossbow"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
+		<!-- <property name="Recipes_to_learn" value="crossbow"/> -->
+		<property name="Skills_to_gain" value="crossbowSchematicPerk"/>
 	</property>
 </item>
 
 <item id="921" name="pistolBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunPistol"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunPistol"/> -->
+		<property name="Skills_to_gain" value="pistolBookPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7604,8 +7605,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gun44Magnum"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gun44Magnum"/> -->
+		<property name="Skills_to_gain" value="theEnforcerMagazinePerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7622,8 +7623,8 @@ Mesh files no longer used:
 <item id="924" name="pumpShotgunSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunPumpShotgun,gunSawedOffPumpShotgun"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunPumpShotgun,gunSawedOffPumpShotgun"/> -->
+		<property name="Skills_to_gain" value="pumpShotgunSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7632,8 +7633,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunMP5"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunMP5"/> -->
+		<property name="Skills_to_gain" value="smgSchematicsPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7642,8 +7643,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunAK47"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunAK47"/> -->
+		<property name="Skills_to_gain" value="ak47SchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7651,8 +7652,8 @@ Mesh files no longer used:
 <item id="931" name="huntingRifleSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunHuntingRifle"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunHuntingRifle"/> -->
+		<property name="Skills_to_gain" value="huntingRifleSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7661,8 +7662,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunSniperRifle"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunSniperRifle"/> -->
+		<property name="Skills_to_gain" value="sniperRifleSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7671,8 +7672,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gunRocketLauncher,rocket,rocketCasing,rocketTip"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
+		<!-- <property name="Recipes_to_learn" value="gunRocketLauncher,rocket,rocketCasing,rocketTip"/> -->
+		<property name="Skills_to_gain" value="rocketLauncherSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7680,8 +7681,8 @@ Mesh files no longer used:
 <item id="935" name="nailgunSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="nailgun"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="nailgun"/> -->
+		<property name="Skills_to_gain" value="nailgunSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7690,8 +7691,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="flamingArrow"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
+		<!-- <property name="Recipes_to_learn" value="flamingArrow"/> -->
+		<property name="Skills_to_gain" value="flamingArrowSchematicPerk"/>
 	</property>
 </item>
 
@@ -7699,8 +7700,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="explodingCrossbowBolt"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="explodingCrossbowBolt"/> -->
+		<property name="Skills_to_gain" value="explodingCrossbowBoltSchematicPerk"/>
 	</property>
 </item>
 <!--
@@ -7807,6 +7808,7 @@ Mesh files no longer used:
 		<property name="Skills_to_gain" value="Wrench Recipe"/>
 	</property>
 </item>
+
 <item id="971" name="clawHammerSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CustomIcon" value="clawHammerSchematic"/>
@@ -7820,8 +7822,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="gasCan"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="gasCan"/> -->
+		<property name="Skills_to_gain" value="gasCanSchematicPerk"/>
 	</property>
 </item>
 
@@ -7829,8 +7831,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="auger,partsAuger_blade"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="auger,partsAuger_blade"/> -->
+		<property name="Skills_to_gain" value="augerSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7839,8 +7841,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="chainsaw,partsChainsaw_blade"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="chainsaw,partsChainsaw_blade"/> -->
+		<property name="Skills_to_gain" value="chainsawSchematicPerk"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item>
@@ -7848,8 +7850,8 @@ Mesh files no longer used:
 <item id="990" name="firstAidKitSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="firstAidKit"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="firstAidKit"/> -->
+		<property name="Skills_to_gain" value="firstAidKitSchematicPerk"/>
 	</property>
 </item>
 
@@ -7858,8 +7860,8 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="500"/>
 	<property name="CustomIcon" value="herbalAntibioticsRecipe"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="herbalAntibiotics"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+		<!-- <property name="Recipes_to_learn" value="herbalAntibiotics"/> -->
+		<property name="Skills_to_gain" value="herbalAntibioticsRecipePerk"/>
 	</property>
 </item>
 
@@ -7901,7 +7903,8 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="minibikeChassis,minibikeSeat,minibikeHandlebars"/>
+		<!-- <property name="Recipes_to_learn" value="minibikeChassis,minibikeSeat,minibikeHandlebars"/> -->
+		<property name="Skills_to_gain" value="minibikesForDumbshitsPerk"/>
 	</property>
 </item>
 
@@ -7916,48 +7919,48 @@ Mesh files no longer used:
 <item id="1011" name="leatherBootsSchematic"> <!-- leatherArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="leatherBoots"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="leatherBoots"/> -->
+		<property name="Skills_to_gain" value="leatherBootsSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1012" name="leatherPantsSchematic"> <!-- leatherArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="leatherPants"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="leatherPants"/> -->
+		<property name="Skills_to_gain" value="leatherPantsSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1013" name="leatherJacketSchematic"> <!-- leatherArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="leatherJacket"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="leatherJacket"/> -->
+		<property name="Skills_to_gain" value="leatherJacketSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1014" name="leatherHoodSchematic"> <!-- leatherArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="leatherHood"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="leatherHood"/> -->
+		<property name="Skills_to_gain" value="leatherHoodSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1015" name="leatherGlovesSchematic"> <!-- leatherArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="leatherGloves"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="leatherGloves"/> -->
+		<property name="Skills_to_gain" value="leatherGlovesSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1016" name="scrapBootsSchematic"> <!-- scrapArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="scrapBoots"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="scrapBoots"/> -->
+		<property name="Skills_to_gain" value="scrapBootsSchematicPerk"/>
 	</property>
 	<property name="DescriptionKey" value="scrapArmorSchematicDesc"/>
 </item>
@@ -7965,8 +7968,8 @@ Mesh files no longer used:
 <item id="1017" name="scrapLegArmorSchematic"> <!-- scrapArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="scrapLegArmor"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="scrapLegArmor"/> -->
+		<property name="Skills_to_gain" value="scrapLegArmorSchematicPerk"/>
 	</property>
 	<property name="DescriptionKey" value="scrapArmorSchematicDesc"/>
 </item>
@@ -7974,8 +7977,8 @@ Mesh files no longer used:
 <item id="1018" name="scrapChestArmorSchematic"> <!-- scrapArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="scrapChestArmor"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="scrapChestArmor"/> -->
+		<property name="Skills_to_gain" value="scrapLegArmorSchematicPerk"/>
 	</property>
 	<property name="DescriptionKey" value="scrapArmorSchematicDesc"/>
 </item>
@@ -7983,8 +7986,8 @@ Mesh files no longer used:
 <item id="1019" name="scrapHelmetSchematic"> <!-- scrapArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="scrapHelmet"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="scrapHelmet"/> -->
+		<property name="Skills_to_gain" value="scrapHelmetSchematicPerk"/>
 	</property>
 	<property name="DescriptionKey" value="scrapArmorSchematicDesc"/>
 </item>
@@ -7992,8 +7995,8 @@ Mesh files no longer used:
 <item id="1020" name="scrapGlovesSchematic"> <!-- scrapArmorSchematic -->
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="scrapGloves"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="scrapGloves"/> -->
+		<property name="Skills_to_gain" value="scrapGlovesSchematicPerk"/>
 	</property>
 	<property name="DescriptionKey" value="scrapArmorSchematicDesc"/>
 </item>
@@ -8010,40 +8013,40 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ironHelmet"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="ironHelmet"/> -->
+		<property name="Skills_to_gain" value="ironHelmetSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1022" name="ironChestArmorSchematic"> <!-- ironArmorSchematic -->
 	<property name="Extends" value="ironHelmetSchematic"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ironChestArmor"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="ironChestArmor"/> -->
+		<property name="Skills_to_gain" value="ironChestArmorSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1023" name="ironLegArmorSchematic"> <!-- ironArmorSchematic -->
 	<property name="Extends" value="ironHelmetSchematic"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ironLegArmor"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="ironLegArmor"/> -->
+		<property name="Skills_to_gain" value="ironLegArmorSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1024" name="ironBootsSchematic"> <!-- ironArmorSchematic -->
 	<property name="Extends" value="ironHelmetSchematic"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ironBoots"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="ironBoots"/> -->
+		<property name="Skills_to_gain" value="ironBootsSchematicPerk"/>
 	</property>
 </item>
 
 <item id="1025" name="ironGlovesSchematic"> <!-- ironArmorSchematic -->
 	<property name="Extends" value="ironHelmetSchematic"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ironGloves"/>
-		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+		<!-- <property name="Recipes_to_learn" value="ironGloves"/> -->
+		<property name="Skills_to_gain" value="ironGlovesSchematicPerk"/>
 	</property>
 </item>
 
@@ -8735,8 +8738,7 @@ Mesh files no longer used:
 
 <item id="1337" name="snowberryPlant">
 	<property name="Extends" value="blueberries"/>
-	<property name="CustomIcon" value="blueberries"/>
-	<property name="CustomIconTint" value="ffffaf"/>
+	<property name="CustomIcon" value="snowberryItemIcon"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material" value="plants"/>
@@ -9948,12 +9950,12 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="Ammo Crafting"/>
 </item>
 
-<item id="1508" name="Remington8Schematics">
+<item id="1508" name="Remington8Schematics"> <!-- Class Only -->
     <property name="CustomIcon" value="Remington8Schematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
 		<!-- <property name="Recipes_to_learn" value="Remington8,Remington8Scoped,Remington8ExtendedMag,Remington8ScopedExtendedMag,Remington8_Stock,Remington8_Receiver,Remington8_Barrel,Remington8_Parts" /> -->
-		<property name="Skills_to_gain" value="craftSkillGuns,Remington8 Recipe,Remington8 Parts Recipe,Remington8 Attachments Recipes" />
+		<!-- <property name="Skills_to_gain" value="Remington8 Recipe,Remington8 Parts Recipe,Remington8 Attachments Recipes" /> -->
     </property>
 </item>
 
@@ -9961,7 +9963,7 @@ Mesh files no longer used:
     <property name="CustomIcon" value="32mmBulletSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="32mmBullet" />
+		<!-- <property name="Recipes_to_learn" value="32mmBullet" /> -->
 		<property name="Skills_to_gain" value="32mm Bullet Crafting" />
     </property>
 </item>
@@ -10071,12 +10073,12 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="624" />
 </item>
 
-<item id="1515" name="DesertEagleSchematic">
+<item id="1515" name="DesertEagleSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="DesertEagleSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
 		<!-- <property name="Recipes_to_learn" value="DesertEagle,DesertEagle_Grip,DesertEagle_Receiver,DesertEagle_Barrel,DesertEagle_Parts" /> -->
-		<property name="Skills_to_gain" value="craftSkillGuns,Desert Eagle Recipe,Desert Eagle Parts Recipe" />
+		<!-- <property name="Skills_to_gain" value="Desert Eagle Recipe,Desert Eagle Parts Recipe" /> -->
     </property>
 </item>
 
@@ -10099,7 +10101,8 @@ Mesh files no longer used:
     <property name="CustomIcon" value="44HollowPointMagBulletSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="44HollowPointMagBullet" />
+		<!-- <property name="Recipes_to_learn" value="44HollowPointMagBullet" /> -->
+		<property name="Skills_to_gain" value="44HollowPointMagBulletSchematicsPerk" />
     </property>
 </item>
 
@@ -10120,7 +10123,8 @@ Mesh files no longer used:
     <property name="CustomIcon" value="HollowPointBulletTipSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Recipes_to_learn" value="HollowPointBulletTip" />
+		<!-- <property name="Recipes_to_learn" value="HollowPointBulletTip" /> -->
+		<property name="Skills_to_gain" value="HollowPointAmmunitionBookPerk" />
     </property>
 </item>
 
@@ -10233,12 +10237,12 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="1700" />
 </item>
 
-<item id="1525" name="FAMASSchematics">
+<item id="1525" name="FAMASSchematics">  <!-- Class Only -->
     <property name="CustomIcon" value="FAMASSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
 		<!-- <property name="Recipes_to_learn" value="FAMAS,FAMASExtendedMag,FAMASSilenced,FAMASExtendedMagSilenced,FAMAS_Stock,FAMAS_Receiver,FAMAS_Barrel,FAMAS_Parts" /> -->
-		<property name="Skills_to_gain" value="craftSkillGuns,FAMAS Recipe, FAMAS Parts Recipe, FAMAS Attachments Recipes" />
+		<!-- <property name="Skills_to_gain" value="FAMAS Recipe, FAMAS Parts Recipe, FAMAS Attachments Recipes" /> -->
     </property>
 </item>
 
@@ -10276,7 +10280,7 @@ Mesh files no longer used:
     <property name="CustomIcon" value="556mmBulletSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="556mmBullet" />
+		<!-- <property name="Recipes_to_learn" value="556mmBullet" /> -->
 		<property name="Skills_to_gain" value="556mm Bullet Crafting" />
     </property>
 </item>
@@ -10285,8 +10289,8 @@ Mesh files no longer used:
     <property name="CustomIcon" value="556mmNATOBulletSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="556mmNATOBullet" />
-		<property name="Skills_to_gain" value="556mm Bullet Crafting" />
+		<!-- <property name="Recipes_to_learn" value="556mmNATOBullet" /> -->
+		<property name="Skills_to_gain" value="556mmNATOBulletSchematicPerk" />
     </property>
 </item>
 
@@ -10398,12 +10402,12 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="1750" />
 </item>
 
-<item id="1535" name="M25SniperRifleSchematic">
+<item id="1535" name="M25SniperRifleSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="M25SniperRifleSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
 		<!-- <property name="Recipes_to_learn" value="M25SniperRifle,M25SniperRifleLongScoped,M25SniperRifleExtendedMagazine,M25SniperRifleLongScopedExtendedMagazine,M25SniperRifle_Stock,M25SniperRifle_Receiver,M25SniperRifle_Barrel,M25SniperRifle_Parts" /> -->
-		<property name="Skills_to_gain" value="craftSkillGuns,M25 Sniper Rifle Recipe,M25 Sniper Rifle Parts Recipe,M25 Sniper Rifle Attachments Recipes" />
+		<!-- <property name="Skills_to_gain" value="M25 Sniper Rifle Recipe,M25 Sniper Rifle Parts Recipe,M25 Sniper Rifle Attachments Recipes" /> -->
     </property>
 </item>
 
@@ -10426,7 +10430,8 @@ Mesh files no longer used:
     <property name="CustomIcon" value="762mmHollowPointBulletSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="762mmHollowPointBullet" />
+		<!-- <property name="Recipes_to_learn" value="762mmHollowPointBullet" /> -->
+		<property name="Skills_to_gain" value="762mmHollowPointBulletSchematicPerk" />
     </property>
 </item>
 
@@ -10511,7 +10516,8 @@ Mesh files no longer used:
     <property name="CustomIcon" value="9mmHollowPointBulletSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="9mmHollowPointBullet" />
+		<!-- <property name="Recipes_to_learn" value="9mmHollowPointBullet" /> -->
+		<property name="Skills_to_gain" value="9mmHollowPointBulletSchematicPerk" />
     </property>
 </item>
 
@@ -10624,12 +10630,12 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="824" />
 </item>
 
-<item id="1547" name="BarettaShotgunSchematic">
+<item id="1547" name="BarettaShotgunSchematic">  <!-- Class Only -->
 	<property name="CustomIcon" value="BarettaShotgunSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
 		<!-- <property name="Recipes_to_learn" value="BarettaShotgun,BarettaShotgun_Stock,BarettaShotgun_Receiver,BarettaShotgun_Barrel,BarettaShotgun_Parts" /> -->
-		<property name="Skills_to_gain" value="craftSkillGuns,Baretta Shotgun Recipe, Baretta Shotgun Parts Recipe" />
+		<!-- <property name="Skills_to_gain" value="Baretta Shotgun Recipe, Baretta Shotgun Parts Recipe" /> -->
     </property>
 </item>
 
@@ -10899,7 +10905,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TungstenArrowHeadSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenArrowHead" />
+		<!-- <property name="Recipes_to_learn" value="TungstenArrowHead" /> -->
+		<property name="Skills_to_gain" value="TungstenArrowHeadSchematicPerk" />
 	</property>
 </item>
 
@@ -10907,7 +10914,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="ExplodingTungstenArrowSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="ExplodingTungstenArrow" />
+		<!-- <property name="Recipes_to_learn" value="ExplodingTungstenArrow" /> -->
+		<property name="Skills_to_gain" value="ExplodingTungstenArrowSchematicPerk" />
 	</property>
 </item>
 
@@ -10915,11 +10923,12 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="FlamingTungstenCrossbowBoltSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="FlamingTungstenCrossbowBolt" />
+		<!-- <property name="Recipes_to_learn" value="FlamingTungstenCrossbowBolt" /> -->
+		<property name="Skills_to_gain" value="FlamingTungstenCrossbowBoltSchematicPerk" />
 	</property>
 </item>
 
-<item id="1558" name="LongbowSchematic">
+<item id="1558" name="LongbowSchematic"> <!-- Class Only -->
 	<property name="CustomIcon" value="LongbowSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
@@ -10931,7 +10940,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="SteelCrossbowSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="SteelCrossbow" />
+		<!-- <property name="Recipes_to_learn" value="SteelCrossbow" /> -->
+		<property name="Skills_to_gain" value="SteelCrossbowSchematicPerk" />
 	</property>
 </item>
 
@@ -11052,6 +11062,9 @@ Mesh files no longer used:
 		<property name="ToolCategory.Butcher" value="0.5" param1="3.5"/>
 		<property name="Sound_harvesting" value="open_animal" param1="organic" />
 		<property name="ToolCategory.harvestingTools" value="0.75" param1="1"/>
+	</property>
+	<property class="Action1">
+		<property name="Repair_amount" value="100"/>
 	</property>
 	<property class="Attributes">
 		<property name="EntityDamage" value="6,12" />
@@ -11672,7 +11685,7 @@ Mesh files no longer used:
 	<property name="DescriptionKey" value="DyeDesc" />
 </item>
 
-<item id="1608" name="BlueprintStationSchematic">
+<item id="1608" name="BlueprintStationSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="BlueprintStationSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
@@ -11700,21 +11713,19 @@ Mesh files no longer used:
 	<property name="CraftingIngredientExp" value="1.75" />
 </item>
 
-<item id="1610" name="WeaponSmithStationSchematic">
+<item id="1610" name="WeaponSmithStationSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="WeaponSmithStationSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
       <!-- <property name="Recipes_to_learn" value="WeaponSmithStation" /> -->
     </property>
 	<property name="EconomicValue" value="1250" />
 </item>
 
-<item id="1611" name="TailorsWorkStationSchematic">
+<item id="1611" name="TailorsWorkStationSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="TailorsWorkStationSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
       <!-- <property name="Recipes_to_learn" value="TailorsWorkStation" /> -->
     </property>
 	<property name="EconomicValue" value="750" />
@@ -12044,8 +12055,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringBandana" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="bandana,bandanaRed,bandanaBlue,bandanaGreen,bandanaBrown,bandanaBlack" />
+		<!-- <property name="Recipes_to_learn" value="bandana,bandanaRed,bandanaBlue,bandanaGreen,bandanaBrown,bandanaBlack" /> -->
+		<property name="Skills_to_gain" value="TailoringBandanaPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12055,8 +12066,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringSkullCap" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="skullCap,skullCapRed,skullCapGreen,skullCapBlue,skullCapBrown,skullCapBlack" />
+		<!-- <property name="Recipes_to_learn" value="skullCap,skullCapRed,skullCapGreen,skullCapBlue,skullCapBrown,skullCapBlack" /> -->
+		<property name="Skills_to_gain" value="TailoringSkullCapPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12067,20 +12078,19 @@ Mesh files no longer used:
     <property name="CustomIconTint" value="42B48E" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="FaceMask,FaceMaskRed,FaceMaskGreen,FaceMaskBlue,FaceMaskBrown,FaceMaskBlack" />
+		<!-- <property name="Recipes_to_learn" value="FaceMask,FaceMaskRed,FaceMaskGreen,FaceMaskBlue,FaceMaskBrown,FaceMaskBlack" /> -->
+		<property name="Skills_to_gain" value="TailoringFaceMaskPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1639" name="TailoringLightCoat">
+<item id="1639" name="TailoringLightCoat"> <!-- Remove ? -->
 	<property name="CustomIcon" value="TailoringLightCoat" />
     <property name="CustomIconTint" value="42B48E" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <!-- <property name="Recipes_to_learn" value="LightCoat,LightCoatRed,LightCoatGreen,LightCoatBrown" /> -->
+		<!-- <property name="Recipes_to_learn" value="LightCoat,LightCoatRed,LightCoatGreen,LightCoatBrown" /> -->
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12090,8 +12100,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringDenimPants" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="denimPants,blackDenimPants,redDenimPants,brownDenimPants,BlueDenimPants" />
+		<!-- <property name="Recipes_to_learn" value="denimPants,blackDenimPants,redDenimPants,brownDenimPants,BlueDenimPants" /> -->
+		<property name="Skills_to_gain" value="TailoringDenimPantsPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12102,8 +12112,8 @@ Mesh files no longer used:
     <property name="CustomIconTint" value="42B48E" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="FlannelPants,BlackFlannelPants,WhiteFlannelPants,RedFlannelPants,GreenFlannelPants,GreyFlannelPants" />
+		<!-- <property name="Recipes_to_learn" value="FlannelPants,BlackFlannelPants,WhiteFlannelPants,RedFlannelPants,GreenFlannelPants,GreyFlannelPants" /> -->
+		<property name="Skills_to_gain" value="TailoringFlannelPantsPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12113,8 +12123,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringShirt" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="shirt,shirtRed,shirtBrown,shirtGreen,shirtBlue,shirtBlack" />
+		<!-- <property name="Recipes_to_learn" value="shirt,shirtRed,shirtBrown,shirtGreen,shirtBlue,shirtBlack" /> -->
+		<property name="Skills_to_gain" value="TailoringShirtPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12124,8 +12134,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringTankTop" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="tankTopWhite,tankTopRed,tankTopPurple,tankTopGreen,tankTopBlue" />
+		<!-- <property name="Recipes_to_learn" value="tankTopWhite,tankTopRed,tankTopPurple,tankTopGreen,tankTopBlue" /> -->
+		<property name="Skills_to_gain" value="TailoringTankTopPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12135,8 +12145,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringSweatShirt" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="sweatshirt,sweatshirtRed,sweatshirtBrown,sweatshirtGreen,sweatshirtBlue,sweatshirtBlack" />
+		<!-- <property name="Recipes_to_learn" value="sweatshirt,sweatshirtRed,sweatshirtBrown,sweatshirtGreen,sweatshirtBlue,sweatshirtBlack" /> -->
+		<property name="Skills_to_gain" value="TailoringSweatShirtPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12146,8 +12156,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringTShirt" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="tshirtWhite,tshirtRed,tshirtBrown,tshirtGreen,tshirtBlue,tshirtBlack" />
+		<!-- <property name="Recipes_to_learn" value="tshirtWhite,tshirtRed,tshirtBrown,tshirtGreen,tshirtBlue,tshirtBlack" /> -->
+		<property name="Skills_to_gain" value="TailoringTShirtPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12157,30 +12167,28 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringCowboyHat" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="cowboyHat,blackCowboyHat" />
+		<!-- <property name="Recipes_to_learn" value="cowboyHat,blackCowboyHat" /> -->
+		<property name="Skills_to_gain" value="TailoringCowboyHatPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1647" name="TailoringPufferCoat">
+<item id="1647" name="TailoringPufferCoat"> <!-- Remove? -->
 	<property name="CustomIcon" value="TailoringPufferCoat" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <!-- <property name="Recipes_to_learn" value="pufferCoat,pufferCoatRed,pufferCoatGreen,pufferCoatBrown,pufferCoatBlack" /> -->
+		<!-- <property name="Recipes_to_learn" value="pufferCoat,pufferCoatRed,pufferCoatGreen,pufferCoatBrown,pufferCoatBlack" /> -->
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1648" name="TailoringLeatherDuster">
+<item id="1648" name="TailoringLeatherDuster">  <!-- Remove? -->
 	<property name="CustomIcon" value="TailoringLightCoat" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <!-- <property name="Recipes_to_learn" value="leatherDuster" /> -->
+		<!-- <property name="Recipes_to_learn" value="leatherDuster" /> -->
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12190,8 +12198,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TailoringBallCap" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="ballCap,BlueBallCap,BlackBallCap,YellowBallCap,GreenBallCap" />
+		<!-- <property name="Recipes_to_learn" value="ballCap,BlueBallCap,BlackBallCap,YellowBallCap,GreenBallCap" /> -->
+		<property name="Skills_to_gain" value="TailoringBallCapPerk" />
     </property>
     <property name="Group" value="Books" />
 	<property name="EconomicValue" value="250" />
@@ -12331,18 +12339,18 @@ Mesh files no longer used:
 	<property name="DescriptionKey" value="KevlarArmorDesc" />
 </item>
 
-<item id="1657" name="KevlarBootsSchematic">
+<item id="1657" name="KevlarBootsSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="leatherBootsSchematic" />
     <property name="CustomIconTint" value="B96D2D" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="KevlarBoots" />
+		<!-- <property name="Recipes_to_learn" value="KevlarBoots" /> -->
     </property>
 	<property name="DescriptionKey" value="KevlarArmorSchematicDesc" />
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1658" name="KevlarGlovesSchematic">
+<item id="1658" name="KevlarGlovesSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="leatherGlovesSchematic" />
     <property name="CustomIconTint" value="B96D2D" />
 	<property name="Extends" value="schematicMaster" />
@@ -12353,37 +12361,37 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1659" name="KevlarLegArmorSchematic">
+<item id="1659" name="KevlarLegArmorSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="leatherPantsSchematic" />
     <property name="CustomIconTint" value="B96D2D" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="KevlarLegArmor" />
-		<property name="Skills_to_gain" value="Kevlar Armor" />
+		<!-- <property name="Recipes_to_learn" value="KevlarLegArmor" />
+		<property name="Skills_to_gain" value="Kevlar Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="KevlarArmorSchematicDesc" />
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1660" name="KevlarVestSchematic">
+<item id="1660" name="KevlarVestSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="leatherJacketSchematic" />
     <property name="CustomIconTint" value="B96D2D" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="KevlarVest" />
-		<property name="Skills_to_gain" value="Kevlar Armor" />
+		<!-- <property name="Recipes_to_learn" value="KevlarVest" />
+		<property name="Skills_to_gain" value="Kevlar Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="KevlarArmorSchematicDesc" />
 	<property name="EconomicValue" value="250" />
 </item>
 
-<item id="1661" name="KevlarHelmetSchematic">
+<item id="1661" name="KevlarHelmetSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="leatherHoodSchematic" />
     <property name="CustomIconTint" value="B96D2D" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="KevlarHelmet" />
-		<property name="Skills_to_gain" value="Kevlar Armor" />
+		<!-- <property name="Recipes_to_learn" value="KevlarHelmet" />
+		<property name="Skills_to_gain" value="Kevlar Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="KevlarArmorSchematicDesc" />
 	<property name="EconomicValue" value="250" />
@@ -12500,61 +12508,61 @@ Mesh files no longer used:
 	<property name="DescriptionKey" value="SteelArmorDesc" />
 </item>
 
-<item id="1667" name="SteelBootsSchematic">
+<item id="1667" name="SteelBootsSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironBootsSchematic" />
     <property name="CustomIconTint" value="22375A" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="SteelBoots" />
-		<property name="Skills_to_gain" value="Steel Armor" />
+		<!-- <property name="Recipes_to_learn" value="SteelBoots" />
+		<property name="Skills_to_gain" value="Steel Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="SteelArmorSchematicDesc" />
 	<property name="EconomicValue" value="400" />
 </item>
 
-<item id="1668" name="SteelLegArmorSchematic">
+<item id="1668" name="SteelLegArmorSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironLegArmorSchematic" />
     <property name="CustomIconTint" value="22375A" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="SteelLegArmor" />
-		<property name="Skills_to_gain" value="Steel Armor" />
+		<!-- <property name="Recipes_to_learn" value="SteelLegArmor" />
+		<property name="Skills_to_gain" value="Steel Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="SteelArmorSchematicDesc" />
 	<property name="EconomicValue" value="400" />
 </item>
 
-<item id="1669" name="SteelChestArmorSchematic">
+<item id="1669" name="SteelChestArmorSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironChestArmorSchematic" />
     <property name="CustomIconTint" value="22375A" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="SteelChestArmor" />
-		<property name="Skills_to_gain" value="Steel Armor" />
+		<!-- <property name="Recipes_to_learn" value="SteelChestArmor" />
+		<property name="Skills_to_gain" value="Steel Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="SteelArmorSchematicDesc" />
 	<property name="EconomicValue" value="400" />
 </item>
 
-<item id="1670" name="SteelHelmetSchematic">
+<item id="1670" name="SteelHelmetSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironHelmetSchematic" />
     <property name="CustomIconTint" value="22375A" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="SteelHelmet" />
-		<property name="Skills_to_gain" value="Steel Armor" />
+		<!-- <property name="Recipes_to_learn" value="SteelHelmet" />
+		<property name="Skills_to_gain" value="Steel Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="SteelArmorSchematicDesc" />
 	<property name="EconomicValue" value="400" />
 </item>
 
-<item id="1671" name="SteelGlovesSchematic">
+<item id="1671" name="SteelGlovesSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironGlovesSchematic" />
     <property name="CustomIconTint" value="22375A" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="SteelGloves" />
-		<property name="Skills_to_gain" value="Steel Armor" />
+		<!-- <property name="Recipes_to_learn" value="SteelGloves" />
+		<property name="Skills_to_gain" value="Steel Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="SteelArmorSchematicDesc" />
 	<property name="EconomicValue" value="400" />
@@ -12670,61 +12678,61 @@ Mesh files no longer used:
 	<property name="DescriptionKey" value="TungstenArmorDesc" />
 </item>
 
-<item id="1677" name="TungstenBootsSchematic">
+<item id="1677" name="TungstenBootsSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironBootsSchematic" />
     <property name="CustomIconTint" value="469A84" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenBoots" />
-		<property name="Skills_to_gain" value="Tungsten Armor" />
+		<!-- <property name="Recipes_to_learn" value="TungstenBoots" />
+		<property name="Skills_to_gain" value="Tungsten Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="TungstenArmorSchematicDesc" />
 	<property name="EconomicValue" value="600" />
 </item>
 
-<item id="1678" name="TungstenLegArmorSchematic">
+<item id="1678" name="TungstenLegArmorSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironLegArmorSchematic" />
     <property name="CustomIconTint" value="469A84" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenLegArmor" />
-		<property name="Skills_to_gain" value="Tungsten Armor" />
+		<!-- <property name="Recipes_to_learn" value="TungstenLegArmor" />
+		<property name="Skills_to_gain" value="Tungsten Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="TungstenArmorSchematicDesc" />
 	<property name="EconomicValue" value="600" />
 </item>
 
-<item id="1679" name="TungstenChestArmorSchematic">
+<item id="1679" name="TungstenChestArmorSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironChestArmorSchematic" />
     <property name="CustomIconTint" value="469A84" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenChestArmor" />
-		<property name="Skills_to_gain" value="Tungsten Armor" />
+		<!-- <property name="Recipes_to_learn" value="TungstenChestArmor" />
+		<property name="Skills_to_gain" value="Tungsten Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="TungstenArmorSchematicDesc" />
 	<property name="EconomicValue" value="600" />
 </item>
 
-<item id="1680" name="TungstenHelmetSchematic">
+<item id="1680" name="TungstenHelmetSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironHelmetSchematic" />
     <property name="CustomIconTint" value="469A84" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenHelmet" />
-		<property name="Skills_to_gain" value="Tungsten Armor" />
+		<!-- <property name="Recipes_to_learn" value="TungstenHelmet" />
+		<property name="Skills_to_gain" value="Tungsten Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="TungstenArmorSchematicDesc" />
 	<property name="EconomicValue" value="600" />
 </item>
 
-<item id="1681" name="TungstenGlovesSchematic">
+<item id="1681" name="TungstenGlovesSchematic"> <!-- Class Only -->
     <property name="CustomIcon" value="ironGlovesSchematic" />
     <property name="CustomIconTint" value="469A84" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenGloves" />
-		<property name="Skills_to_gain" value="Tungsten Armor" />
+		<!-- <property name="Recipes_to_learn" value="TungstenGloves" />
+		<property name="Skills_to_gain" value="Tungsten Armor" /> -->
     </property>
 	<property name="DescriptionKey" value="TungstenArmorSchematicDesc" />
 	<property name="EconomicValue" value="600" />
@@ -12818,17 +12826,18 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="SteelMacheteSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="SteelMachete" />
+		<!-- <property name="Recipes_to_learn" value="SteelMachete" /> -->
+		<property name="Skills_to_gain" value="SteelMacheteSchematicPerk" />
 	</property>
 	<property name="EconomicValue" value="750" />
 </item>
 
-<item id="1685" name="TungstenMacheteSchematic">
+<item id="1685" name="TungstenMacheteSchematic"> <!-- Class Only -->
 	<property name="CustomIcon" value="TungstenMacheteSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<!-- <property name="Recipes_to_learn" value="TungstenMachete" /> -->
-		<property name="Skills_to_gain" value="craftSkillWeapons" />
+		<!-- <property name="Recipes_to_learn" value="TungstenMachete" />
+		<property name="Skills_to_gain" value="craftSkillWeapons" /> -->
 	</property>
 	<property name="EconomicValue" value="750" />
 </item>
@@ -12871,8 +12880,8 @@ Mesh files no longer used:
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Repair" />
 		<property name="Delay" value="0.15" />
-		<property name="Repair_amount" value="250" />
-		<property name="Upgrade_hit_offset" value="-3" />
+		<property name="Repair_amount" value="500" />
+		<property name="Upgrade_hit_offset" value="-5" />
 		<property name="Repair_action_sound" value="Weapons/Motorized/Nailgun/nailgun_fire" />
 		<property name="Upgrade_action_sound" value="Weapons/Motorized/Nailgun/nailgun_fire" />
 		<property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,nail,ForgedTungsten" />
@@ -12886,12 +12895,12 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="1200" />
 </item>
 
-<item id="1687" name="HDNailgunSchematic">
+<item id="1687" name="HDNailgunSchematic"> <!-- Class Only -->
 	<property name="CustomIcon" value="HDNailgunSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="HDNailgun,HDNailgun_Frame,HDNailgun_Receiver,HDNailgun_Parts,HDNailgun_Battery" />
-		<property name="Skills_to_gain" value="HD Nailgun Recipe" />
+		<!-- <property name="Recipes_to_learn" value="HDNailgun,HDNailgun_Frame,HDNailgun_Receiver,HDNailgun_Parts,HDNailgun_Battery" />
+		<property name="Skills_to_gain" value="HD Nailgun Recipe" /> -->
 	</property>
 	<property name="EconomicValue" value="1000" />
 </item>
@@ -12918,7 +12927,7 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="650" />
 </item>
 
-<item id="1689" name="ClubTungstenSchematic">
+<item id="1689" name="ClubTungstenSchematic"> <!-- Class Only -->
 	<property name="CustomIcon" value="ClubTungstenSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
@@ -13003,7 +13012,7 @@ Mesh files no longer used:
 		<property name="DamageEntity" value="15" />
 		<property name="DamageBlock" value="0.4" />
 		<property name="Sound_start" value="swoosh" />
-		<property name="Stamina_usage" value="7" />
+		<property name="Stamina_usage" value="8" />
 		<property name="DamageBonus.wood" value="3" />
 		<property name="DamageBonus.head" value="5" />
 		<property name="DamageBonus.glass" value="25" />
@@ -13014,9 +13023,9 @@ Mesh files no longer used:
 		<property name="Sound_harvesting" value="UseActions/open_animal" />
 	</property>
 	<property class="Attributes">
-		<property name="EntityDamage" value="52,73" />
+		<property name="EntityDamage" value="47,67" />
 		<property name="BlockDamage" value="8,16" />
-		<property name="DegradationMax" value="125,550" />
+		<property name="DegradationMax" value="200,600" />
 		<property name="DegradationRate" value="1,1" />
 		<property name="DismembermentBaseChance" value="0.225,0.425"/>
 		<property name="DismembermentBonus" value="0,0.00036"/>
@@ -13024,10 +13033,10 @@ Mesh files no longer used:
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="ActionSkillGroup" value="Blade Weapons"/>
 	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
-	<property name="EconomicValue" value="1350" />
+	<property name="EconomicValue" value="1500" />
 </item>
 
-<item id="1695" name="GoldTippedMacheteSchematic">
+<item id="1695" name="GoldTippedMacheteSchematic"> <!-- Class Only -->
 	<property name="CustomIcon" value="GoldTippedMacheteSchematic" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
@@ -13076,7 +13085,7 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="1150" />
 </item>
 
-<item id="1697" name="GoldTippedKnifeBook">
+<item id="1697" name="GoldTippedKnifeBook"> <!-- Class Only -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="GoldTippedKnifeBook" />
 	<property class="Action1">
@@ -13093,12 +13102,12 @@ Mesh files no longer used:
 	<property name="HoldType" value="21" />
 	<property name="Weight" value="5" />
 	<property name="FuelValue" value="5" />
-	<property name="Stacknumber" value="1" />
-    <property class="Action1"> <!-- UseAction -->
+	<property name="Stacknumber" value="5" />
+    <property class="Action1">
 		<property name="Class" value="LearnRecipe" />
 		<property name="Delay" value="0.3" />
 		<property name="ActionExp" value="2"/>
-		<property name="ActionExpBonusMultiplier" value="4"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
+		<property name="ActionExpBonusMultiplier" value="4"/>
 		<property name="Sound_start" value="Misc/recipe_unlocked" />
 	</property>
 	<property name="Group" value="Books" />
@@ -13106,19 +13115,19 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="50" />
 </item>
 
-<item id="1699" name="MagazineScience">
+<item id="1699" name="MagazineScience"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineScience" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="craftSkillScience" /> -->
+		<property name="Skills_to_gain" value="craftSkillScience" />
 	</property>
 </item>
 
-<item id="1700" name="MagazineMechanic">
+<item id="1700" name="MagazineMechanic"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineMechanic" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="Mechanic" /> -->
+		<property name="Skills_to_gain" value="Mechanic" />
 	</property>
 </item>
 
@@ -13202,11 +13211,11 @@ Mesh files no longer used:
 	</property>
 </item>
 
-<item id="1711" name="MagazineConstruction">
+<item id="1711" name="MagazineConstruction"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineConstruction" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="Construction" /> -->
+		<property name="Skills_to_gain" value="Construction" />
 	</property>
 </item>
 
@@ -13250,35 +13259,35 @@ Mesh files no longer used:
 	</property>
 </item>
 
-<item id="1717" name="MagazineWeaponSmithing">
+<item id="1717" name="MagazineWeaponSmithing"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineWeaponSmithing" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="craftSkillWeapons" /> -->
+		<property name="Skills_to_gain" value="craftSkillWeapons" />
 	</property>
 </item>
 
-<item id="1718" name="MagazineToolSmithing">
+<item id="1718" name="MagazineToolSmithing"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineToolSmithing" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="craftSkillTools" /> -->
+		<property name="Skills_to_gain" value="craftSkillTools" />
 	</property>
 </item>
 
-<item id="1719" name="MagazineGunSmithing">
+<item id="1719" name="MagazineGunSmithing"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineGunSmithing" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns" /> -->
+		<property name="Skills_to_gain" value="craftSkillGuns" />
 	</property>
 </item>
 
-<item id="1720" name="MagazineLightGunSmithing">
+<item id="1720" name="MagazineAdvancedToolSmithing"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineLightGunSmithing" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="craftSkillGuns" /> -->
+		<!-- <property name="Skills_to_gain" value="Advanced Tool Smithing" /> -->
 	</property>
 </item>
 
@@ -13307,11 +13316,11 @@ Mesh files no longer used:
 	</property>
 </item>
 
-<item id="1725" name="MagazineArmorSmithing">
+<item id="1725" name="MagazineArmorSmithing"> <!-- Class Reward -->
 	<property name="CustomIcon" value="MagazineArmorSmithing" />
 	<property name="Extends" value="MagazineMaster" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="Armor Smithing" /> -->
+		<property name="Skills_to_gain" value="craftSkillArmor" />
 	</property>
 </item>
 
@@ -13776,7 +13785,8 @@ Mesh files no longer used:
 </item>
 
 <item id="1782" name="wheatSeed">
-	<property name="CustomIcon" value="wheatSeed" />
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="SeedWheatPacket" />
     <property name="Meshfile" value="Items/Food/seed_blueberry" />
     <property name="Material" value="organic" />
     <property name="HoldType" value="21" />
@@ -13794,7 +13804,8 @@ Mesh files no longer used:
 </item>
 
 <item id="1783" name="appleSeed">
-    <property name="CustomIcon" value="appleSeed" />
+	<property name="CreativeMode" value="Dev"/>
+    <property name="CustomIcon" value="SeedApplePacket" />
     <property name="Meshfile" value="Items/Food/seed_blueberry" />
     <property name="Material" value="organic" />
     <property name="HoldType" value="21" />
@@ -13942,7 +13953,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="BreadRecipe" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="Bread,Dough,Flour" />
+		<!-- <property name="Recipes_to_learn" value="Bread,Dough,Flour" /> -->
+		<property name="Skills_to_gain" value="BreadRecipePerk" />
 	</property>
 	<property name="EconomicValue" value="100" />
 </item>
@@ -14127,7 +14139,6 @@ Mesh files no longer used:
     <property name="HoldType" value="3" />
     <property name="Stacknumber" value="64" />
     <property class="Action1">
-      <!-- UseAction -->
       <property name="Class" value="Eat" />
       <property name="Delay" value="1.0" />
       <property name="Use_time" value="0" />
@@ -14402,8 +14413,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="FishingBook" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="FishingPole, FishingPoleBated" />
-		<property name="Skills_to_gain" value="craftSkillTools" />
+		<!-- <property name="Recipes_to_learn" value="FishingPole, FishingPoleBated" /> -->
+		<property name="Skills_to_gain" value="FishingBookPerk" />
     </property>
 </item>
 
@@ -14411,7 +14422,7 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="FishStewRecipe" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="FishStew" />
+		<!-- <property name="Recipes_to_learn" value="FishStew" /> -->
 		<property name="Skills_to_gain" value="Fish Stew Recipe" />
     </property>
 </item>
@@ -14420,8 +14431,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="FireTrapSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="FireTrap" />
-		<property name="Skills_to_gain" value="craftSkillTools" />
+		<!-- <property name="Recipes_to_learn" value="FireTrap" /> -->
+		<property name="Skills_to_gain" value="FireTrapSchematicPerk" />
     </property>
 </item>
 
@@ -14429,8 +14440,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="SettingTheTrap" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="RabbitTrap(Unbaited),RabbitTrap(Baited)" />
-		<property name="Skills_to_gain" value="craftSkillTools" />
+		<!-- <property name="Recipes_to_learn" value="RabbitTrap(Unbaited),RabbitTrap(Baited)" /> -->
+		<property name="Skills_to_gain" value="SettingTheTrapPerk" />
     </property>
 </item>
 
@@ -14438,8 +14449,8 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="TNTBook" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-		<property name="Recipes_to_learn" value="tnt,dynamite,pipeBomb" />
-		<property name="Skills_to_gain" value="craftSkillTools,Explosives,Explosives,Explosives" />
+		<!-- <property name="Recipes_to_learn" value="tnt,dynamite,pipeBomb" /> -->
+		<property name="Skills_to_gain" value="TNTBookPerk" />
     </property>
 </item>
 
@@ -14661,23 +14672,21 @@ Mesh files no longer used:
 	<property name="ActionExp" value="5"/>
 </item>
 
-<item id="1823" name="ApplePieRecipe">
+<item id="1823" name="ApplePieRecipe"> <!-- Class Only -->
     <property name="CustomIcon" value="ApplePieRecipe" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="ApplePie" />
-      <property name="Skills_to_gain" value="Apple Pie Recipe" />
+		<!-- <property name="Recipes_to_learn" value="ApplePie" /> -->
+		<property name="Skills_to_gain" value="Apple Pie Recipe" />
     </property>
 </item>
 
-<item id="1824" name="AppleJuiceRecipe">
+<item id="1824" name="AppleJuiceRecipe"> <!-- Class Only -->
     <property name="CustomIcon" value="AppleJuiceRecipe" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="AppleJuice" />
-      <property name="Skills_to_gain" value="Apple Juice Recipe" />
+		<!-- <property name="Recipes_to_learn" value="AppleJuice" /> -->
+		<property name="Skills_to_gain" value="Apple Juice Recipe" />
     </property>
 </item>
 
@@ -14685,9 +14694,8 @@ Mesh files no longer used:
     <property name="CustomIcon" value="RoastedMeatPieRecipe" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="RoastedMeatPie" />
-      <property name="Skills_to_gain" value="Roasted Meat Pie Recipe" />
+		<!-- <property name="Recipes_to_learn" value="RoastedMeatPie" /> -->
+		<property name="Skills_to_gain" value="RoastedMeatPieRecipePerk" />
     </property>
 </item>
 
@@ -14695,31 +14703,28 @@ Mesh files no longer used:
     <property name="CustomIcon" value="MossyBrewRecipe" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="MossyBrew" />
-      <property name="Skills_to_gain" value="Mossy Brew Recipe" />
+		<!-- <property name="Recipes_to_learn" value="MossyBrew" /> -->
+		<property name="Skills_to_gain" value="Mossy Brew Recipe" />
     </property>
 </item>
 
-<item id="1827" name="ImmunizationShotRecipe">
+<item id="1827" name="ImmunizationShotRecipe"> <!-- Class Only -->
     <property name="CustomIcon" value="bloodDrawKit" />
     <property name="CustomIconTint" value="d4a00e" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <!-- <property name="Recipes_to_learn" value="ImmunizationShot" />
-      <property name="Skills_to_gain" value="Immunization Shot" /> -->
+		<!-- <property name="Recipes_to_learn" value="ImmunizationShot" />
+		<property name="Skills_to_gain" value="Immunization Shot" /> -->
     </property>
 </item>
 
-<item id="1828" name="LegBoosterShotRecipe">
+<item id="1828" name="LegBoosterShotRecipe"> <!-- Class Only -->
     <property name="CustomIcon" value="bloodDrawKit" />
     <property name="CustomIconTint" value="04CCAA" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <!-- <property name="Recipes_to_learn" value="LegBoosterShot" />
-      <property name="Skills_to_gain" value="Leg Booster Shot" /> -->
+		<!-- <property name="Recipes_to_learn" value="LegBoosterShot" />
+		<property name="Skills_to_gain" value="Leg Booster Shot" /> -->
     </property>
 </item>
 
@@ -14727,13 +14732,12 @@ Mesh files no longer used:
     <property name="CustomIcon" value="MushroomStewRecipe" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
-      <property name="Class" value="LearnRecipe" />
-      <property name="Recipes_to_learn" value="MushroomStew" />
-      <property name="Skills_to_gain" value="Mushroom Stew Recipe" />
+		<!-- <property name="Recipes_to_learn" value="MushroomStew" /> -->
+		<property name="Skills_to_gain" value="MushroomStewRecipePerk" />
     </property>
 </item>
 
-<item id="1830" name="HouseDoorSchematic">
+<item id="1830" name="HouseDoorSchematic"> <!-- Remove ? -->
     <property name="CustomIcon" value="HouseDoorSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
@@ -14742,7 +14746,7 @@ Mesh files no longer used:
     </property>
 </item>
 
-<item id="1831" name="SteelDoorSchematic">
+<item id="1831" name="SteelDoorSchematic"> <!-- Remove ? -->
     <property name="CustomIcon" value="SteelDoorSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
@@ -14751,7 +14755,7 @@ Mesh files no longer used:
     </property>
 </item>
 
-<item id="1832" name="TungstenDoorSchematic">
+<item id="1832" name="TungstenDoorSchematic"> <!-- Remove ? -->
     <property name="CustomIcon" value="TungstenDoorSchematic" />
 	<property name="Extends" value="schematicMaster" />
     <property class="Action1">
@@ -14844,7 +14848,7 @@ Mesh files no longer used:
 
 <item id="1837" name="KevlarMinibikeSeat">
 	<property name="CustomIcon" value="KevlarMinibikeSeat" />
-	<property name="DescriptionKey" value="minibikePartsGroupDesc"/>
+	<property name="DescriptionKey" value="KevlarMinibikeSeatDesc"/>
 	<property name="VehicleSlotType" value="seat" />
 	<property name="Meshfile" value="Items/Misc/sackPrefab" />
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -14863,7 +14867,7 @@ Mesh files no longer used:
 
 <item id="1838" name="TungstenMinibikeSeat">
 	<property name="CustomIcon" value="TungstenMinibikeSeat" />
-	<property name="DescriptionKey" value="minibikePartsGroupDesc"/>
+	<property name="DescriptionKey" value="TungstenMinibikeSeatDesc"/>
 	<property name="VehicleSlotType" value="seat" />
 	<property name="Meshfile" value="Items/Misc/sackPrefab" />
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -14882,7 +14886,7 @@ Mesh files no longer used:
 
 <item id="1839" name="HDMinibikeWheels">
 	<property name="CustomIcon" value="HDMinibikeWheels" />
-	<property name="DescriptionKey" value="minibikePartsGroupDesc"/>
+	<property name="DescriptionKey" value="HDMinibikeWheelsDesc"/>
 	<property name="VehicleSlotType" value="wheel" />
 	<property name="Meshfile" value="Items/Misc/sackPrefab" />
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -14921,7 +14925,7 @@ Mesh files no longer used:
 
 <item id="1841" name="SteelMinibikeHandlebars">
 	<property name="CustomIcon" value="SteelMinibikeHandlebars" />
-	<property name="DescriptionKey" value="minibikePartsGroupDesc"/>
+	<property name="DescriptionKey" value="SteelMinibikeHandlebarsDesc"/>
 	<property name="VehicleSlotType" value="handlebars"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab" />
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -14943,7 +14947,7 @@ Mesh files no longer used:
 
 <item id="1842" name="TungstenMinibikeHandlebars">
 	<property name="CustomIcon" value="TungstenMinibikeHandlebars" />
-	<property name="DescriptionKey" value="minibikePartsGroupDesc"/>
+	<property name="DescriptionKey" value="TungstenMinibikeHandlebarsDesc"/>
 	<property name="VehicleSlotType" value="handlebars"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab" />
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -15020,22 +15024,22 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="850" />
 </item>
 
-<item id="1847" name="MinibikesForSmartshits">
+<item id="1847" name="MinibikesForSmartshits"> <!-- Class Only -->
 	<property name="CustomIcon" value="MinibikesForSmartshits" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="SteelMinibikeChassis, KevlarMinibikeSeat, SteelMinibikeHandlebars" />
-		<property name="Skills_to_gain" value="Mechanic" />
+		<!-- <property name="Recipes_to_learn" value="SteelMinibikeChassis, KevlarMinibikeSeat, SteelMinibikeHandlebars" />
+		<property name="Skills_to_gain" value="Mechanic" /> -->
 	</property>
 	<property name="EconomicValue" value="1250" />
 </item>
 
-<item id="1848" name="MinibikesForToughshits">
+<item id="1848" name="MinibikesForToughshits"> <!-- Class Only -->
 	<property name="CustomIcon" value="MinibikesForToughshits" />
 	<property name="Extends" value="schematicMaster" />
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="TungstenMinibikeChassis, TungstenMinibikeSeat, TungstenMinibikeHandlebars" />
-		<property name="Skills_to_gain" value="Mechanic" />
+		<!-- <property name="Recipes_to_learn" value="TungstenMinibikeChassis, TungstenMinibikeSeat, TungstenMinibikeHandlebars" />
+		<property name="Skills_to_gain" value="Mechanic" /> -->
 	</property>
 	<property name="EconomicValue" value="1750" />
 </item>
@@ -15099,12 +15103,12 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="Mechanic" />
 </item>
 
-<item id="1852" name="ECOAugerSchematic">
+<item id="1852" name="ECOAugerSchematic"> <!-- Class Only -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="ECOAugerSchematic" />
 	<property class="Action1">
-		<!-- <property name="Recipes_to_learn" value="ECOAuger,ECOAuger_Blade,ECOAuger_Parts" /> -->
-		<property name="Skills_to_gain" value="Advanced craftSkillTools,ECO Auger Recipe" />
+		<!-- <property name="Recipes_to_learn" value="ECOAuger,ECOAuger_Blade,ECOAuger_Parts" />
+		<property name="Skills_to_gain" value="ECO Auger Recipe" /> -->
 	</property>
 </item>
 
@@ -15167,12 +15171,12 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="Mechanic" />
 </item>
 
-<item id="1856" name="HDAugerSchematic">
+<item id="1856" name="HDAugerSchematic"> <!-- Class Only -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="HDAugerSchematic" />
 	<property class="Action1">
-		<!-- <property name="Recipes_to_learn" value="HDAuger,HDAuger_Blade,HDAuger_Parts" /> -->
-		<property name="Skills_to_gain" value="Advanced craftSkillTools,HD Auger Recipe" />
+		<!-- <property name="Recipes_to_learn" value="HDAuger,HDAuger_Blade,HDAuger_Parts" />
+		<property name="Skills_to_gain" value="HD Auger Recipe" /> -->
 	</property>
 </item>
 
@@ -15230,12 +15234,12 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="Mechanic" />
 </item>
 
-<item id="1860" name="ECOChainsawSchematic">
+<item id="1860" name="ECOChainsawSchematic"> <!-- Class Only -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="ECOChainsawSchematic" />
 	<property class="Action1">
-		<!-- <property name="Recipes_to_learn" value="ECOChainsaw,ECOChainsaw_Blade,ECOChainsaw_Parts" /> -->
-		<property name="Skills_to_gain" value="Advanced craftSkillTools,ECO Chainsaw Recipe" />
+		<!-- <property name="Recipes_to_learn" value="ECOChainsaw,ECOChainsaw_Blade,ECOChainsaw_Parts" />
+		<property name="Skills_to_gain" value="ECO Chainsaw Recipe" /> -->
 	</property>
 </item>
 
@@ -15294,12 +15298,12 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="Mechanic" />
 </item>
 
-<item id="1864" name="HDChainsawSchematic">
+<item id="1864" name="HDChainsawSchematic"> <!-- Class Only -->
 	<property name="Extends" value="schematicMaster" />
 	<property name="CustomIcon" value="HDChainsawSchematic" />
 	<property class="Action1">
-		<!-- <property name="Recipes_to_learn" value="HDChainsaw,HDChainsaw_Blade,HDChainsaw_Parts" /> -->
-		<property name="Skills_to_gain" value="Advanced craftSkillTools,HD Chainsaw Recipe" />
+		<!-- <property name="Recipes_to_learn" value="HDChainsaw,HDChainsaw_Blade,HDChainsaw_Parts" />
+		<property name="Skills_to_gain" value="HD Chainsaw Recipe" /> -->
 	</property>
 </item>
 
@@ -15474,11 +15478,11 @@ Mesh files no longer used:
 	</property>
 </item>
 
-<item id="1872" name="StarterClassScholar"> <!-- Remove -->
+<item id="1872" name="MagazineQuickerCrafting"> <!-- Class Reward -->
 	<property name="Extends" value="MagazineMaster" />
 	<property name="CustomIcon" value="StarterClassScholar" />
 	<property class="Action1">
-		<!-- <property name="Skills_to_gain" value="Farming,Secret Stash,Treasure Hunter,The Fixer,Quicker Crafting" /> -->
+		<property name="Skills_to_gain" value="Quicker Crafting" />
 	</property>
 </item>
 
@@ -15503,7 +15507,8 @@ Mesh files no longer used:
 	<property name="DescriptionKey" value="DyeDesc" />
 </item>
 
-<item id="1875" name="Sickle">
+<!-- Remove? -->
+<!-- <item id="1875" name="Sickle">
 	<property name="CustomIcon" value="machete" />
 	<property name="CustomIconTint" value="8B0000" />
 	<property name="Meshfile" value="Items/Weapons/Melee/Knives/machetePrefab" />
@@ -15516,7 +15521,7 @@ Mesh files no longer used:
 	<property name="SoundJammed" value="ItemNeedsRepair" />
 	<property name="SoundDestroy" value="wooddestroy1" />
 	<property name="Weight" value="200" />
-	<property class="Action0"> <!-- AttackAction -->
+	<property class="Action0">
 		<property name="Class" value="Melee" />
 		<property name="Delay" value="1" />
 		<property name="Range" value="2.2" />
@@ -15543,7 +15548,7 @@ Mesh files no longer used:
 	<property name="ActionSkillGroup" value="Blade Weapons"/>
 	<property name="CraftingSkillGroup" value="craftSkillTools"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
-</item>
+</item> -->
 
 <item id="1876" name="PrisonerShirt">
 	<property name="Extends" value="tshirtWhite" />
@@ -15563,7 +15568,7 @@ Mesh files no longer used:
 	</property>
 </item>
 
-<item id="1878" name="RestReset">
+<!-- <item id="1878" name="RestReset">
 	<property name="CustomIcon" value="vitamins" />
     <property name="CustomIconTint" value="008000" />
 	<property name="IsDeveloper" value="true" />
@@ -15579,8 +15584,8 @@ Mesh files no longer used:
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_wellness" value="0" />
-		<!-- <property name="Buff" value="RestReset" />
-		<property name="Debuff" value="WellRested,Rested,Tired,Exhausted" /> -->
+		<property name="Buff" value="RestReset" />
+		<property name="Debuff" value="WellRested,Rested,Tired,Exhausted" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
     </property>
     <property name="Group" value="Medicine" />
@@ -15603,37 +15608,37 @@ Mesh files no longer used:
 		<property name="Gain_stamina" value="0" />
 		<property name="Gain_health" value="0" />
 		<property name="Gain_wellness" value="0" />
-		<!-- <property name="Buff" value="RestSet" />
-		<property name="Debuff" value="Tired,Exhausted" /> -->
+		<property name="Buff" value="RestSet" />
+		<property name="Debuff" value="Tired,Exhausted" />
 		<property name="Sound_start" value="UseActions/player_painkillers" />
     </property>
     <property name="Group" value="Medicine" />
 	<property name="CraftingSkillGroup" value="craftSkillScience" />
 	<property name="ActionSkillGroup" value="Medicine" />
-	<!-- <property name="PickupJournalEntry" value="modinfo01_Tip,modinfo2Tip,modinfo3Tip" /> -->
-</item>
+</item> -->
 
 <item id="1880" name="HDWrench">
 	<property name="CustomIcon" value="HDWrench" />\
 	<property name="Extends" value="wrench" />
 	<property name="RepairTools" value="ForgedTungsten"/>
 	<property name="EconomicValue" value="560" />
-	<property class="Action0"> <!-- AttackAction -->
+	<property class="Action0">
 		<property name="DamageBonus.metal" value="3" />
 		<property name="DamageBonus.organic" value=".4" />
 		<property name="ActionExp" value="5"/>
-		<property name="ToolCategory.Disassemble" value="1.2" param1="2"  />
+		<property name="ToolCategory.Disassemble" value="1.5" param1="2"  />
+		<property name="ToolCategory.HDDisassemble" value="1" param1="2"  />
 	</property>
-	<property class="Action1"> <!-- UseAction -->
+	<property class="Action1">
 		<property name="Repair_amount" value="400" />
 		<property name="Upgrade_hit_offset" value="-2" />
+		<property name="Restricted_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,gasCan"/>
 	</property>
 	<property class="Attributes">
 		<property name="BlockDamage" value="25,50" />
 		<property name="DegradationMax" value="750,2500" />
 	</property>
 	<property name="ActionSkillGroup" value="Mechanic"/>
-	<!-- <property name="ActionSkillGroup" value="Construction Tools"/> -->
 	<property name="CraftingSkillGroup" value="craftSkillTools"/>
 	<property name="RepairExpMultiplier" value="6"/>
 </item>
@@ -15641,6 +15646,8 @@ Mesh files no longer used:
 <item id="1881" name="ChickenRaw">
 	<property name="Extends" value="rawMeat" />
 	<property name="CustomIcon" value="ChickenRaw" />
+	<property name="Material" value="rawWhiteMeat" />
+	<property name="Weight" value="1" />
 	<property name="EconomicValue" value="16" />
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
@@ -15712,6 +15719,8 @@ Mesh files no longer used:
 <item id="1885" name="VenisonRaw">
 	<property name="Extends" value="rawMeat" />
 	<property name="CustomIcon" value="rawMeat" />
+	<property name="Material" value="rawRedMeat" />
+	<property name="Weight" value="1" />
 	<property name="EconomicValue" value="25" />
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
@@ -15783,6 +15792,8 @@ Mesh files no longer used:
 <item id="1889" name="PorkRaw">
 	<property name="Extends" value="rawMeat" />
 	<property name="CustomIcon" value="PorkRaw" />
+	<property name="Material" value="rawWhiteMeat" />
+	<property name="Weight" value="1" />
 	<property name="EconomicValue" value="14" />
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
@@ -15837,6 +15848,8 @@ Mesh files no longer used:
 <item id="1892" name="RabbitRaw">
 	<property name="Extends" value="rawMeat" />
 	<property name="CustomIcon" value="RabbitMeatRaw" />
+	<property name="Material" value="rawRedMeat" />
+	<property name="Weight" value="1" />
 	<property name="EconomicValue" value="10" />
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
@@ -15908,6 +15921,8 @@ Mesh files no longer used:
 <item id="1896" name="BearMeatRaw">
 	<property name="Extends" value="rawMeat" />
 	<property name="CustomIcon" value="BearMeatRaw" />
+	<property name="Material" value="rawRedMeat" />
+	<property name="Weight" value="1" />
 	<property name="EconomicValue" value="40" />
 	<property name="CraftingIngredientTime" value="15" />
 	<property class="Action1">
@@ -16642,6 +16657,339 @@ Mesh files no longer used:
 	<property name="Group" value="Resources"/>
 	<property name="EconomicValue" value="2000"/>
 	<property name="CraftingSkillGroup" value="craftSkillTools"/>
+</item>
+
+<item id="1928" name="steelClawHammer">
+	<property name="CustomIcon" value="steelClawHammer"/>
+	<property name="Meshfile" value="Items/Tools/hammerPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="RepairTools" value="forgedSteel"/>
+	<property name="HoldType" value="32"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="FuelValue" value="18"/>
+	<property name="EconomicValue" value="200"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Melee"/>
+		<property name="Delay" value="0.8"/>
+		<property name="Range" value="2.1"/>
+		<property name="Block_range" value="4"/>
+		<property name="Sphere" value="0.1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Stamina_usage" value="6"/>
+		<property name="DamageBonus.head" value="4"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.stone" value="1"/>
+		<property name="DamageBonus.metal" value="1"/>
+		<property name="DamageBonus.organic" value="0.5"/>
+		<property name="DamageBonus.earth" value="1"/>
+		<property name="ToolCategory.harvestingTools" value="0.7" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="10"/>
+		<property name="ActionExp" value="3"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value="0.5"/>
+		<property name="Repair_amount" value="250"/>
+		<property name="Upgrade_hit_offset" value="-3"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,nail,gasCan"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="8,20"/>
+		<property name="BlockDamage" value="15,40"/>
+		<property name="DegradationMax" value="100,600"/>
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DismembermentBaseChance" value="-0.3,-0.1"/>
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="ActionSkillGroup" value="Construction Tools"/>
+	<property name="CraftingSkillGroup" value="craftSkillTools"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
+<item id="1929" name="rawWhiteMeat">
+	<property name="CustomIcon" value="ChickenRaw"/>
+	<property name="Meshfile" value="Items/Misc/raw_meatPrefab"/>
+	<property name="Material" value="organic"/>
+	<property name="HoldType" value="3"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="EconomicValue" value="20"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_food" value="10"/>
+		<property name="Buff" value="foodPoisoning,eatFood_3_Trigger"/>
+		<property name="Buff_chance" value="0.4,1"/>
+		<property name="Gain_water" value="0"/>
+		<property name="Gain_stamina" value="0"/>
+		<property name="Gain_sickness" value="30"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Smell" value="ExLargeSmell"/>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1930" name="rawRedMeat">
+	<property name="CustomIcon" value="BearMeatRaw"/>
+	<property name="Meshfile" value="Items/Misc/raw_meatPrefab"/>
+	<property name="Material" value="organic"/>
+	<property name="HoldType" value="3"/>
+	<property name="Stacknumber" value="50"/> <!-- STK food -->
+	<property name="EconomicValue" value="20"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_food" value="10"/>
+		<property name="Buff" value="foodPoisoning,eatFood_3_Trigger"/>
+		<property name="Buff_chance" value="0.4,1"/>
+		<property name="Gain_water" value="0"/>
+		<property name="Gain_stamina" value="0"/>
+		<property name="Gain_sickness" value="30"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Smell" value="ExLargeSmell"/>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1931" name="lockPick">
+	<property name="CustomIcon" value="lockPick"/>
+	<property name="Meshfile" value="Items/Weapons/Melee/Knives/boneShivPrefab"/>
+	<property name="Material" value="stone"/>
+	<property name="EconomicValue" value="75"/>
+	<property name="SellableToTrader" value="false"/>
+	<!-- <property name="HoldType" value="36"/> -->
+	<property name="HoldType" value="29"/>
+	<property name="Degradation" value="150" param1="true"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property class="Action1">
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value="0.4"/>
+		<property name="Repair_amount" value="350"/>
+		<property name="Upgrade_hit_offset" value="0"/>
+		<property name="Upgrade_action_sound" value="repair_block"/>
+		<property name="Sound_start" value="UseActions/repair_block"/>
+		<property name="Sound_repeat" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="lockpick"/>
+		<property name="Restricted_upgrade_items" value="wood,clayLump,dirtFragment,snowBall,scrapIron,forgedIron,forgedSteel,steelPolish,concreteMix,cobblestones,yuccaFibers,gasCan"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="ActionSkillGroup" value="Construction Tools"/>
+	<property name="CraftingSkillGroup" value="craftSkillTools"/>
+</item>
+
+<item id="1932" name="blackberries">
+	<property name="CustomIcon" value="blackberries"/>
+	<property name="Meshfile" value="Items/Food/blueberriesPrefab"/>
+	<property name="Material" value="plants"/>
+	<property name="HoldType" value="23"/>
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="CraftingIngredientTime" value="8"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_food" value="1"/>
+		<property name="Buff" value="eatFood_1_Trigger,gainImmunity_xsmall_Trigger"/>
+		<property name="Gain_water" value="1"/>
+		<property name="Gain_wellness" value="0.09"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="DropScale" value="4"/>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1933" name="strawberries">
+	<property name="CustomIcon" value="strawberries"/>
+	<property name="Meshfile" value="Items/Food/blueberriesPrefab"/>
+	<property name="Material" value="plants"/>
+	<property name="HoldType" value="23"/>
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="CraftingIngredientTime" value="8"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_food" value="2"/>
+		<property name="Buff" value="eatFood_1_Trigger,gainImmunity_xsmall_Trigger"/>
+		<property name="Gain_water" value="0"/>
+		<property name="Gain_wellness" value="0.09"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="DropScale" value="4"/>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1934" name="handWeeder">
+	<property name="CustomIcon" value="handWeeder"/>
+	<property name="Meshfile" value="Items/Weapons/Melee/Knives/machetePrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="RepairTools" value="forgedIron"/>
+	<property name="HoldType" value="47"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="FuelValue" value="12"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="Weight" value="200"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Melee"/>
+		<property name="Delay" value="0.65"/>
+		<property name="Range" value="2.2"/>
+		<property name="Sphere" value="0.1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Stamina_usage" value="1.02"/>
+		<property name="DamageBonus.wood" value="0.05"/>
+		<property name="DamageBonus.head" value="0.05"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.leaves" value="2"/>
+		<property name="DamageBonus.earth" value="2"/>
+		<property name="DamageBonus.organic" value="0.05"/>
+		<property name="ToolCategory.handToolHarvest" value="1" param1="7"/>
+		<!-- <property name="Sound_harvesting" value="open_animal" param1="organic" /> -->
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="5,10"/>
+		<property name="BlockDamage" value="1,2"/>
+		<property name="DegradationMax" value="500,1200"/>
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DismembermentBaseChance" value="0,0.01"/>
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="ActionSkillGroup" value="Blade Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillTools"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
+<item id="1935" name="swatHelmetLight">
+	<property name="CustomIcon" value="swatHelmetLight"/>
+	<property name="Waterproof" value="0.15"/>
+	<property name="Class" value="ItemClassToggle"/>
+	<property name="Meshfile" value="Items/Clothing/Head/swatHelmetPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="RepairTools" value="forgedIron"/>
+	<property name="HoldType" value="7"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="Weight" value="120"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="LightSource" value="Entities/Lighting/miningHelmetLightSource"/>
+	<property class="Attributes"> <!-- ironArmor -->
+		<property name="ConcussiveProtection" value="0.26,0.65"/>
+		<property name="PunctureProtection" value="0.24,0.6"/>
+		<property name="FireProtection" value="0.2,0.5"/>
+		<property name="RadiationProtection" value="0.16,0.4"/>
+		<property name="ElectricalProtection" value="0.06,0.1"/>
+		<property name="DegradationMax" value="320,800"/>
+	</property>
+	<property name="ActivateObject" value="miningHelmetLightSource(Clone)"/>
+	<property class="UMA">
+		<property name="Mesh" value="gear_swat_helmet"/>
+		<property name="Overlay0" value="gear_swat_helmet"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+	<property name="Group" value="Clothing"/>
+	<property name="ActionSkillGroup" value="Clothing/Armor"/>
+	<property name="CraftingSkillGroup" value="craftSkillArmor"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value="0.7"/>
+</item>
+
+<item id="1936" name="strawberryJam">
+	<property name="CustomIcon" value="strawberryJam"/>
+	<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
+	<property name="Material" value="glass"/>
+	<property name="HoldType" value="3"/>
+	<property name="Stacknumber" value="25"/> <!-- STK resource -->
+	<property name="EconomicValue" value="75"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="CraftingIngredientTime" value="8"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="4"/>
+		<property name="Gain_food" value="12"/>
+		<property name="Buff" value="eatFood_12_Trigger,gainImmunity_medium_Trigger"/>
+		<property name="Gain_water" value="1"/>
+		<property name="Gain_wellness" value="1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="DropScale" value="4"/>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1937" name="strawberryJamSandwich">
+	<property name="CustomIcon" value="strawberryJamSandwich"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="HoldType" value="31"/>
+	<property name="Material" value="organic"/>
+	<property name="Stacknumber" value="100"/> <!-- STK food -->
+	<property name="EconomicValue" value="100"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="true"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="6"/>
+		<property name="Gain_food" value="25"/>
+		<property name="Gain_wellness" value="1.1"/>
+		<property name="Buff" value="eatFood_26_Trigger,gainImmunity_large_Trigger"/>
+		<property name="Buff_chance" value="1,1"/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1938" name="blackberryJuice">
+	<property name="CustomIcon" value="blackberryJuice"/>
+	<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
+	<property name="Material" value="glass"/>
+	<property name="HoldType" value="3"/>
+	<property name="Stacknumber" value="100"/> <!-- STK drink -->
+	<property name="Weight" value="10"/>
+	<property name="EconomicValue" value="30"/>
+	<property name="CraftingIngredientTime" value="15"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_stamina" value="35"/>
+		<property name="Gain_food" value="0"/>
+		<property name="Gain_water" value="15"/>
+		<property name="Gain_wellness" value="0.23"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Buff" value="extinguishFireBuff"/>
+		<property name="Create_item" value="emptyJar"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="1939" name="steelClawHammerSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="steelClawHammerSchematic"/>
+	<property class="Action1">
+		<!-- <property name="Recipes_to_learn" value="steelClawHammer"/> -->
+		<property name="Skills_to_gain" value="steelClawHammerSchematicPerk"/>
+	</property>
 </item>
 
 </items>

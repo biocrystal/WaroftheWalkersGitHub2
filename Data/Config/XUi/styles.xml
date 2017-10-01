@@ -1,6 +1,6 @@
 <styles>
 
-<!-- <<< SMX A16.3B12R1 START - BY SIRILLION >>> -->
+<!-- <<< SMX A16.3B12R2 START - BY SIRILLION >>> -->
 
 	<style name="SMXUnitFrameWindow" type="window">
 		<style_entry name="pos" value="9,20" />
@@ -33,6 +33,24 @@
 		<style_entry name="holding_color" value="[white]" />
 		<style_entry name="width" value="49" />
 		<style_entry name="height" value="49" />
+		<style_entry name="hover_icon_grow" value="1.5" />
+		<style_entry name="on_press" value="true" />
+		<style_entry name="sound_volume" value="0.75" />
+		<style_entry name="pickup_sound" value="[pickup_click]" />
+		<style_entry name="place_sound" value="[place_click]" />
+	</style>
+	
+<!-- SIRILLION: dwallorde, I added this section to handle the increased size for the icons in the smelting queue -->
+
+	<style name="SMXForgeItemStack">
+		<style_entry name="select_color" value="[beige]" /> 
+		<style_entry name="press_color" value="[limeGreen]" /> 
+		<style_entry name="final_pressed_color" value="[lightGrey]" /> 
+		<style_entry name="background_color" value="[mediumGrey]" /> 
+		<style_entry name="highlight_color" value="[hoverColor]" /> 
+		<style_entry name="holding_color" value="[white]" />
+		<style_entry name="width" value="59" />
+		<style_entry name="height" value="59" />
 		<style_entry name="hover_icon_grow" value="1.5" />
 		<style_entry name="on_press" value="true" />
 		<style_entry name="sound_volume" value="0.75" />
@@ -137,7 +155,7 @@
 		<style_entry name="foregroundlayer" value="true" />
 	</style>
 	
-<!-- <<< SMX A16.3B12R1 END - BY SIRILLION >>> -->
+<!-- <<< SMX A16.3B12R2 END - BY SIRILLION >>> -->
 
 	<global>
 		<!-- 	
@@ -613,13 +631,14 @@
 	<style name="workstation.reserve.name" type="label">
 		<style_entry name="depth" value="2"/>
 		<style_entry name="height" value="24"/>
-		<style_entry name="width" value="53"/>
+		<style_entry name="width" value="84"/> <!-- SIRILLION: dwallorde, I increased the size here to give TUNGSTEN the same size that the rest of the materials in the forge | Original Value = "53" -->
 	</style>
 	
 	<style name="workstation.reserve.weight" type="label">
 		<style_entry name="depth" value="2"/>
 		<style_entry name="height" value="24"/>
-		<style_entry name="width" value="74"/>
+		<style_entry name="width" value="70"/> <!-- SIRILLION: dwallorde, I decreased the width here to move the smelted resource count a bit more left from the edge of the window border | Original Value = "74" -->
+		<style_entry name="justify" value="Right"/> <!-- SIRILLION: dwallorde, I added this line to justify the smelted resource count to the right so it moves away from the resource names. An added bonus is a neater justification of the numbers | Original Value = N/A -->
 		<style_entry name="color" value="[beige]"/>
 	</style>
 	

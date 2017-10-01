@@ -100,7 +100,7 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 	<property name="stepsound" value="water" />
 	<property name="lightopacity" value="3" />
 	<property name="stability_glue" value="0" />
-	<property name="movement_factor" value="0.9" />
+	<property name="movement_factor" value="1" />
 	<property name="Mass" type="int" value="0" />
 </material>
 
@@ -1343,6 +1343,53 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 	<property name="stability_glue" value="24" />
 	<property name="Mass" type="int" value="6" />
 	<property name="MaxDamage" value="1" />
+</material>
+
+<material id="birdnest">
+	<property name="damage_category" value="earth" />
+	<property name="surface_category" value="plant" />
+	<property name="particle_category" value="xt_tallgrass" />
+	<property name="particle_destroy_category" value="xt_tallgrass" />
+	<property name="Hardness" type="float" value="1" />
+	<property name="stepsound" value="wood" />
+	<property name="stability_glue" value="40" />
+	<property name="Mass" type="int" value="5" />
+	<property name="MaxDamage" value="50" />
+	<property name="Experience" value="1"/>
+</material>
+
+<!-- Temp Material for Meat Scrapping in V5.1 -->
+
+<material id="rawWhiteMeat">
+	<property name="damage_category" value="organic" />
+	<property name="surface_category" value="organic" />
+	<property name="particle_category" value="organic" />
+	<property name="forge_category" value="rawWhiteMeat" />
+	<property name="Hardness" type="float" value="1" />
+	<property name="stepsound" value="organic" />
+	<property name="fertile_level" value="1" />
+	<property name="stability_glue" value="0" />
+	<property name="Mass" type="int" value="1" />
+	<property name="StabilitySupport" value="false" />
+	<property name="movement_factor" value="0.5" />
+	<property name="MaxDamage" value="50" />
+	<property name="Experience" value="3.0"/>
+</material>
+
+<material id="rawRedMeat">
+	<property name="damage_category" value="organic" />
+	<property name="surface_category" value="organic" />
+	<property name="particle_category" value="organic" />
+	<property name="forge_category" value="rawRedMeat" />
+	<property name="Hardness" type="float" value="1" />
+	<property name="stepsound" value="organic" />
+	<property name="fertile_level" value="1" />
+	<property name="stability_glue" value="0" />
+	<property name="Mass" type="int" value="1" />
+	<property name="StabilitySupport" value="false" />
+	<property name="movement_factor" value="0.5" />
+	<property name="MaxDamage" value="50" />
+	<property name="Experience" value="3.0"/>
 </material>
 
 </materials>

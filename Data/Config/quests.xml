@@ -597,7 +597,7 @@
 	repeatable="true"
 	category_key="Quest"
 	difficulty="hard">
-		<objective type="FetchKeep" id="PorkRaw" value="5" />
+		<objective type="FetchKeep" id="rawWhiteMeat" value="5" />
 		<objective type="FetchKeep" id="egg" value="10" />
 		<objective type="Craft" id="baconAndEggs" value="5" />
 		<reward type="Quest" id="quest_huntinghidearmorcooking3" />
@@ -679,7 +679,7 @@
 	difficulty="medium">
 		<objective type="Time" value="900" optional="true" />
 		<objective type="FetchKeep" id="bottledWater" value="5" />
-		<objective type="FetchKeep" id="BearMeatRaw" value="5" />
+		<objective type="FetchKeep" id="rawRedMeat" value="5" />
 		<objective type="FetchKeep" id="potato" value="10" />
 		<objective type="FetchKeep" id="mushrooms" value="10" />
 		<objective type="Craft" id="MushroomStew" value="5" />
@@ -699,7 +699,7 @@
 	category_key="challenge"
 	difficulty="medium">
 		<objective type="Time" value="900" optional="true" />
-		<objective type="FetchKeep" id="VenisonRaw" value="10" />
+		<objective type="FetchKeep" id="rawRedMeat" value="10" />
 		<objective type="FetchKeep" id="Dough" value="10" />
 		<objective type="FetchKeep" id="potato" value="5" />
 		<objective type="FetchKeep" id="mushrooms" value="5" />
@@ -720,7 +720,7 @@
 	category_key="challenge"
 	difficulty="medium">
 		<objective type="Time" value="900" optional="true" />
-		<objective type="FetchKeep" id="VenisonRaw" value="5" />
+		<objective type="FetchKeep" id="rawRedMeat" value="5" />
 		<objective type="FetchKeep" id="potato" value="5" />
 		<objective type="FetchKeep" id="corn" value="5" />
 		<objective type="FetchKeep" id="bottledWater" value="5" />
@@ -764,7 +764,7 @@
 	difficulty="easy">
 		<objective type="Time" value="900" optional="true" />
 		<objective type="FetchKeep" id="egg" value="10" />
-		<objective type="FetchKeep" id="PorkRaw" value="5" />
+		<objective type="FetchKeep" id="rawWhiteMeat" value="5" />
 		<objective type="Craft" id="baconAndEggs" value="5" />
 		<reward type="SkillPoints" value="1" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -1078,12 +1078,7 @@
 	difficulty="hard">
 		<objective type="FetchKeep" id="wood" value="120" />
 		<objective type="FetchKeep" id="nail" value="60" />
-		<objective type="Craft" id="AmmoStorage" value="1" />
-		<objective type="Craft" id="BuildingStorage" value="1" />
-		<objective type="Craft" id="ExplosivesStorage" value="1" />
-		<objective type="Craft" id="FoodStorage" value="1" />
-		<objective type="Craft" id="HealthStorage" value="1" />
-		<objective type="Craft" id="WeaponsStorage" value="1" />
+		<objective type="Craft" id="GenericStorage" value="1" />
 		<reward type="SkillPoints" value="3" />
 		<reward type="Exp" value="1500" />
 	</quest>
@@ -1768,7 +1763,7 @@
 		<!-- <reward type="Item" id="ironBlocksSchematic" value="1" />
 		<reward type="Item" id="tungstenBlocksSchematic" value="1" /> -->
 		<reward type="Item" id="WoodWorkingWorkbench" value="1" />
-		<reward type="Skill" id="Construction" value="1" />
+		<reward type="Item" id="MagazineConstruction" value="1" /> <!-- Construction 1 Skill Point Reward -->
 		<!-- <reward type="Skill" id="CobblestoneConstruction" value="1" /> -->
 		<reward type="Skill" id="BuilderClassLevel2" value="1" />
 		<reward type="Quest" id="classtrainingbuilder3" />
@@ -1790,7 +1785,7 @@
 		<objective type="Craft" id="flagstoneRamp" value="10" />
 		<reward type="Exp" value="2500" />
 		<reward type="SkillPoints" value="3" />
-		<reward type="Skill" id="Construction" value="1" />
+		<reward type="Item" id="MagazineConstruction" value="1" /> <!-- Construction 1 Skill Point Reward -->
 		<reward type="Skill" id="BuilderClassLevel3" value="1" />
 		<reward type="Item" id="nailgunSchematic" value="1" />
 		<reward type="Item" id="HDNailgunSchematic" value="1" />
@@ -1800,6 +1795,7 @@
 	
 	<quest id="classtrainingbuilder4"
 	name_key="classtrainingbuilder_completion"
+	group_name="BuilderClassTraining"
 	offer_key="classtrainingbuilder_completion_info"
 	description_key="classtrainingbuilder_completion_info"
 	icon="classBuilderLevel3Icon"
@@ -1849,7 +1845,7 @@
 	category_key="Quest"
 	difficulty="easy">
 		<action type="TrackQuest" />
-		<objective type="FetchKeep" id="PorkRaw" value="5" />
+		<objective type="FetchKeep" id="rawWhiteMeat" value="5" />
 		<objective type="Craft" id="PorkGrilled" value="5" />
 		<reward type="Exp" value="2000" />
 		<reward type="SkillPoints" value="2" />
@@ -1942,6 +1938,7 @@
 		<objective type="FetchKeep" id="chrysanthemumPlant" value="5" />
 		<reward type="Exp" value="2000" />
 		<reward type="SkillPoints" value="2" />
+		<!-- <reward type="Item" id="MagazineQuickerCrafting" value="1" /> --> <!-- Quicker Crafting 1 Skill Point Reward -->
 		<reward type="Skill" id="Quicker Crafting" value="1" />
 		<reward type="Skill" id="ScholarClassLevel2" value="1" />
 		<reward type="Quest" id="classtrainingscholar3" />
@@ -1970,7 +1967,7 @@
 		<reward type="Recipe" id="BlueprintWorkStation" />
 		<reward type="Skill" id="Secret Stash" value="1" />
 		<reward type="Skill" id="scholartreasurehunting" value="1" />
-		<reward type="Skill" id="craftSkillScience" value="1" />
+		<reward type="Item" id="MagazineScience" value="1" /> <!-- Craft Skill Science 1 Skill Point Reward -->
 		<reward type="Skill" id="ScholarClassLevel3" value="1" />
 		<reward type="Quest" id="classtrainingscholar4" />
 	</quest>
@@ -2036,7 +2033,7 @@
 		<reward type="Skill" id="Dead Shot" value="1" />
 		<reward type="Item" id="Remington8" value="250" />
 		<reward type="Item" id="32mmBullet" value="100" />
-		<reward type="Skill" id="craftSkillGuns" value="1" />
+		<reward type="Item" id="MagazineGunSmithing" value="1" /> <!-- Craft Skill Guns 1 Skill Point Reward -->
 		<reward type="Skill" id="MarksmanClassLevel2" value="1" />
 		<reward type="Quest" id="classtrainingmarksman3" />
 	</quest>
@@ -2061,7 +2058,7 @@
 		<reward type="Skill" id="Boom Stick" value="1" />
 		<reward type="Recipe" id="WeaponSmithStation" />
 		<reward type="Item" id="BarettaShotgun" value="250" />
-		<reward type="Skill" id="craftSkillGuns" value="1" />
+		<reward type="Item" id="MagazineGunSmithing" value="1" /> <!-- Craft Skill Guns 1 Skill Point Reward -->
 		<reward type="Skill" id="MarksmanClassLevel3" value="1" />
 		<reward type="Quest" id="classtrainingmarksman4" />
 	</quest>
@@ -2122,7 +2119,7 @@
 		<reward type="Recipe" id="TungstenMachete" />
 		<reward type="Item" id="clubBarbed" value="250" />
 		<reward type="Skill" id="Club Crafting" value="1" />
-		<reward type="Skill" id="craftSkillWeapons" value="1" />
+		<reward type="Item" id="MagazineWeaponSmithing" value="1" /> <!-- Craft Skill Weapons 1 Skill Point Reward -->
 		<reward type="Skill" id="Blade Weapons" value="15" />
 		<reward type="Skill" id="Blunt Weapons" value="15" />
 		<reward type="Skill" id="FighterClassLevel2" value="1" />
@@ -2154,7 +2151,7 @@
 		<reward type="Item" id="GoldTippedKnife" value="250" />
 		<reward type="Item" id="GoldTippedMachete" value="250" />
 		<reward type="Item" id="casinoCoin" value="2000" />
-		<reward type="Skill" id="craftSkillWeapons" value="1" />
+		<reward type="Item" id="MagazineWeaponSmithing" value="1" /> <!-- Craft Skill Weapons 1 Skill Point Reward -->
 		<reward type="Skill" id="Blade Weapons" value="20" />
 		<reward type="Skill" id="Blunt Weapons" value="20" />
 		<reward type="Skill" id="FighterClassLevel3" value="1" />
@@ -2195,7 +2192,7 @@
 		<reward type="Skill" id="Iron Tool Crafting" value="1" />
 		<reward type="Recipe" id="wrench" />
 		<reward type="Item" id="wrench" value="250" />
-		<reward type="Skill" id="craftSkillTools" value="1" />
+		<reward type="Item" id="MagazineToolSmithing" value="1" /> <!-- Craft Skill Tool Smithing 1 Skill Point Reward -->
 		<reward type="Skill" id="Construction Tools" value="10" />
 		<reward type="Skill" id="Barter" value="5" />
 		<reward type="Skill" id="TradesmanClassLevel1" value="1" />
@@ -2221,8 +2218,7 @@
 		<reward type="Recipe" id="HDWrench" />
 		<reward type="Item" id="sledgehammerSchematic" value="1" />
 		<reward type="Item" id="sledgehammer" value="250" />
-		<reward type="Skill" id="craftSkillTools" value="1" />
-		<reward type="Skill" id="Advanced Tool Smithing" value="1" />
+		<reward type="Item" id="MagazineToolSmithing" value="1" /> <!-- Craft Skill Tool Smithing 1 Skill Point Reward -->
 		<reward type="Skill" id="Construction Tools" value="25" />
 		<reward type="Skill" id="Barter" value="10" />
 		<reward type="Skill" id="TradesmanClassLevel2" value="1" />
@@ -2254,8 +2250,7 @@
 		<reward type="Item" id="HDWrench" value="250" />
 		<reward type="Item" id="FireaxeDiamondTipped" value="250" />
 		<reward type="Item" id="PickaxeDiamondTipped" value="250" />
-		<reward type="Skill" id="Advanced Tool Smithing" value="1" />
-		<reward type="Skill" id="Mechanic" value="2" />
+		<reward type="Item" id="MagazineMechanic" value="1" /> <!-- Craft Skill Mechanic 1 Skill Point Reward -->
 		<reward type="Skill" id="Barter" value="15" />
 		<reward type="Skill" id="TradesmanClassLevel3" value="1" />
 		<reward type="Quest" id="classtrainingtradesman4" />
@@ -2292,7 +2287,7 @@
 		<reward type="SkillPoints" value="1" />
 		<reward type="Skill" id="Cloth Armor" value="1" />
 		<reward type="Recipe" id="TailorsWorkStation" />
-		<reward type="Skill" id="craftSkillArmor" value="1" />
+		<reward type="Item" id="MagazineArmorSmithing" value="1" /> <!-- Craft Skill Armor Crafting 1 Skill Point Reward -->
 		<reward type="Skill" id="Clothing/Armor" value="5" />
 		<reward type="Skill" id="ProtectionClassLevel1" value="1" />
 		<reward type="Quest" id="classtrainingprotection2" />
@@ -2318,7 +2313,7 @@
 		<reward type="SkillPoints" value="2" />
 		<reward type="Recipe" id="Kevlar" />
 		<reward type="Item" id="leather" value="35" />
-		<reward type="Skill" id="craftSkillArmor" value="1" />
+		<reward type="Item" id="MagazineArmorSmithing" value="1" /> <!-- Craft Skill Armor Crafting 1 Skill Point Reward -->
 		<reward type="Skill" id="Clothing/Armor" value="10" />
 		<reward type="Skill" id="ProtectionClassLevel2" value="1" />
 		<reward type="Quest" id="classtrainingprotection3" />
@@ -2349,7 +2344,7 @@
 		<reward type="Item" id="KevlarLegArmor" value="250" />
 		<reward type="Item" id="KevlarBoots" value="250" />
 		<reward type="Item" id="ClassCrateProtection" value="1" />
-		<reward type="Skill" id="craftSkillArmor" value="1" />
+		<reward type="Item" id="MagazineArmorSmithing" value="1" /> <!-- Craft Skill Armor Crafting 1 Skill Point Reward -->
 		<reward type="Skill" id="Clothing/Armor" value="15" />
 		<reward type="Skill" id="ProtectionClassLevel3" value="1" />
 		<reward type="Quest" id="classtrainingprotection4" />

@@ -48,14 +48,19 @@
 		<entity name="zombieMoeCrawler" prob="0.1" />
 		<entity name="zombieJoeCrawler" prob="0.1" />
 		<entity name="zombieBoeCrawler" prob="0.1" />
-		<entity name="SurvivorBob" prob="0.05" />
-		<entity name="SurvivorBill" prob="0.05" />
-		<entity name="SurvivorSheela" prob="0.05" />
-		<entity name="SurvivorEmma" prob="0.05" />
-		<entity name="SurvivorKevin" prob="0.05" />
-		<entity name="SurvivorLarry" prob="0.05" />
-		<entity name="SurvivorHannah" prob="0.05" />
-		<entity name="SurvivorZoey" prob="0.05" />
+		<entity name="npcSurvivorBob" prob="0.05" />
+		<entity name="npcSurvivorBill" prob="0.05" />
+		<entity name="npcSurvivorSheela" prob="0.05" />
+		<entity name="npcSurvivorEmma" prob="0.05" />
+		<entity name="npcSurvivorKevin" prob="0.05" />
+		<entity name="npcSurvivorLarry" prob="0.05" />
+		<entity name="npcSurvivorHannah" prob="0.05" />
+		<entity name="npcSurvivorZoey" prob="0.05" />
+		<entity name="npcTravelingTraderJoel" prob="0.004" />
+		<entity name="npcTravelingTraderRekt" prob="0.004" />
+		<entity name="npcTravelingTraderBob" prob="0.004" />
+		<entity name="npcTravelingTraderJimmy" prob="0.004" />
+		<entity name="npcTravelingTraderHugh" prob="0.004" />
 	</entitygroup>
 	
 	<entitygroup name="ZombiesAllPlusDog">
@@ -157,16 +162,16 @@
 		<entity name="zombieMaleHazmat" prob="0.05" />
 		<entity name="zombieMaleHazmat" prob="0.05" />
 		<entity name="zombieFatHawaiian" />
-		<entity name="banditMelee" prob="0.1" />
-		<entity name="BanditBilly" prob="0.1" />
-		<entity name="BanditMichelle" prob="0.1" />
-		<entity name="banditRanged" prob="0.1" />
-		<entity name="BanditSasha" prob="0.1" />
-		<entity name="BanditDwarfSherry" prob="0.1" />
-		<entity name="BanditRoger" prob="0.09"/>
-		<entity name="banditLeader" prob="0.05"/>
-		<entity name="BanditKane" prob="0.05"/>
-		<entity name="BanditShahala" prob="0.025"/>
+		<entity name="npcBanditMichael" prob="0.1" />
+		<entity name="npcBanditBilly" prob="0.1" />
+		<entity name="npcBanditMichelle" prob="0.1" />
+		<entity name="npcBanditDrake" prob="0.1" />
+		<entity name="npcBanditSasha" prob="0.1" />
+		<entity name="npcBanditDwarfSherry" prob="0.1" />
+		<entity name="npcBanditRoger" prob="0.09"/>
+		<entity name="npcBanditLeaderPete" prob="0.05"/>
+		<entity name="npcBanditKane" prob="0.05"/>
+		<entity name="npcBanditShahala" prob="0.025"/>
 	</entitygroup>	
 	
 	<entitygroup name="ZombiesWastelandNightwithBandits">
@@ -190,16 +195,16 @@
 		<entity name="zombieMaleHazmat" prob="0.1" />
 		<entity name="zombieMaleHazmat" prob="0.1" />
 		<entity name="zombieFatHawaiian" />
-		<entity name="banditMelee" prob="0.1" />
-		<entity name="BanditBilly" prob="0.1" />
-		<entity name="BanditMichelle" prob="0.1" />
-		<entity name="banditRanged" prob="0.1" />
-		<entity name="BanditSasha" prob="0.1" />
-		<entity name="BanditDwarfSherry" prob="0.1" />
-		<entity name="BanditRoger" prob="0.09"/>
-		<entity name="banditLeader" prob="0.05"/>
-		<entity name="BanditKane" prob="0.05"/>
-		<entity name="BanditShahala" prob="0.025"/>
+		<entity name="npcBanditMichael" prob="0.1" />
+		<entity name="npcBanditBilly" prob="0.1" />
+		<entity name="npcBanditMichelle" prob="0.1" />
+		<entity name="npcBanditDrake" prob="0.1" />
+		<entity name="npcBanditSasha" prob="0.1" />
+		<entity name="npcBanditDwarfSherry" prob="0.1" />
+		<entity name="npcBanditRoger" prob="0.09"/>
+		<entity name="npcBanditLeaderPete" prob="0.05"/>
+		<entity name="npcBanditKane" prob="0.05"/>
+		<entity name="npcBanditShahala" prob="0.025"/>
 	</entitygroup>
 	
 	<entitygroup name="ZombiesAllwithBandits">
@@ -218,31 +223,31 @@
 		<entity name="zombieMoeCrawler" prob="0.2" />
 		<entity name="zombieJoeCrawler" prob="0.2" />
 		<entity name="zombieBoeCrawler" prob="0.2" />
-		<entity name="banditMelee" prob="0.1" />
-		<entity name="BanditBilly" prob="0.1" />
-		<entity name="BanditMichelle" prob="0.1" />
-		<entity name="banditRanged" prob="0.1" />
-		<entity name="BanditSasha" prob="0.1" />
-		<entity name="BanditDwarfSherry" prob="0.1" />
-		<entity name="BanditRoger" prob="0.09"/>
-		<entity name="banditLeader" prob="0.05"/>
-		<entity name="BanditKane" prob="0.05"/>
-		<entity name="BanditShahala" prob="0.025"/>
+		<entity name="npcBanditMichael" prob="0.1" />
+		<entity name="npcBanditBilly" prob="0.1" />
+		<entity name="npcBanditMichelle" prob="0.1" />
+		<entity name="npcBanditDrake" prob="0.1" />
+		<entity name="npcBanditSasha" prob="0.1" />
+		<entity name="npcBanditDwarfSherry" prob="0.1" />
+		<entity name="npcBanditRoger" prob="0.09"/>
+		<entity name="npcBanditLeaderPete" prob="0.05"/>
+		<entity name="npcBanditKane" prob="0.05"/>
+		<entity name="npcBanditShahala" prob="0.025"/>
 	</entitygroup>
 	
 	<entitygroup name="ZombiesBurntForestwithBandits">
 		<entity name="zombieBurnt" prob="0.65"/>
 		<entity name="zombieSteveCrawler" prob="0.2"/>
-		<entity name="banditMelee" prob="0.025" />
-		<entity name="BanditBilly" prob="0.025" />
-		<entity name="BanditMichelle" prob="0.025" />
-		<entity name="banditRanged" prob="0.025" />
-		<entity name="BanditSasha" prob="0.025" />
-		<entity name="BanditDwarfSherry" prob="0.025" />
-		<entity name="BanditRoger" prob="0.009"/>
-		<entity name="banditLeader" prob="0.005"/>
-		<entity name="BanditKane" prob="0.005"/>
-		<entity name="BanditShahala" prob="0.0025"/>
+		<entity name="npcBanditMichael" prob="0.1" />
+		<entity name="npcBanditBilly" prob="0.1" />
+		<entity name="npcBanditMichelle" prob="0.1" />
+		<entity name="npcBanditDrake" prob="0.1" />
+		<entity name="npcBanditSasha" prob="0.1" />
+		<entity name="npcBanditDwarfSherry" prob="0.1" />
+		<entity name="npcBanditRoger" prob="0.09"/>
+		<entity name="npcBanditLeaderPete" prob="0.05"/>
+		<entity name="npcBanditKane" prob="0.05"/>
+		<entity name="npcBanditShahala" prob="0.025"/>
 	</entitygroup>
 
 	<entitygroup name="ZombiesWastelandNightNoBears">
@@ -350,33 +355,38 @@
 
 	<entitygroup name="SnowZombies">
 		<entity name="zombieSnow" prob="1"/>
-		<!-- <entity name="SnowZombieLarry" prob="1"/>
-		<entity name="SnowZombieSarah" prob="1"/> -->
+		<entity name="SnowZombieLarry" prob="1"/>
+		<entity name="SnowZombieSarah" prob="1"/>
 	</entitygroup>
 	
 	<entitygroup name="SnowZombiesPlusSurvivors">
 		<entity name="zombieSnow" />
 		<entity name="SnowZombieLarry" />
 		<entity name="SnowZombieSarah" />
-		<entity name="SurvivorBob" prob="0.05" />
-		<entity name="SurvivorBill" prob="0.05" />
-		<entity name="SurvivorSheela" prob="0.05" />
-		<entity name="SurvivorEmma" prob="0.05" />
-		<entity name="SurvivorKevin" prob="0.05" />
-		<entity name="SurvivorLarry" prob="0.05" />
-		<entity name="SurvivorHannah" prob="0.05" />
-		<entity name="SurvivorZoey" prob="0.05" />
+		<entity name="npcSurvivorBob" prob="0.05" />
+		<entity name="npcSurvivorBill" prob="0.05" />
+		<entity name="npcSurvivorSheela" prob="0.05" />
+		<entity name="npcSurvivorEmma" prob="0.05" />
+		<entity name="npcSurvivorKevin" prob="0.05" />
+		<entity name="npcSurvivorLarry" prob="0.05" />
+		<entity name="npcSurvivorHannah" prob="0.05" />
+		<entity name="npcSurvivorZoey" prob="0.05" />
+		<entity name="npcTravelingTraderJoel" prob="0.004" />
+		<entity name="npcTravelingTraderRekt" prob="0.004" />
+		<entity name="npcTravelingTraderBob" prob="0.004" />
+		<entity name="npcTravelingTraderJimmy" prob="0.004" />
+		<entity name="npcTravelingTraderHugh" prob="0.004" />
 	</entitygroup>
 
 	<entitygroup name="ZombiesBoss">
-		<!-- <entity name="ZombieMechanicJoeBoss" />
+		<entity name="ZombieMechanicJoeBoss" />
 		<entity name="ZombieNurseAnneBoss" />
 		<entity name="ZombieHousewifeMarianneBoss" />
 		<entity name="ZombieBuilderBobBoss" />
 		<entity name="ZombieInvestigatorHenryBoss" />
 		<entity name="ZombieThugBillyBoss" />
 		<entity name="ZombieMasterLeroyBoss" />
-		<entity name="ZombieAccountantZoeBoss" /> -->
+		<entity name="ZombieAccountantZoeBoss" />
 		<entity name="zombieFatCop" />
 	</entitygroup>
 
@@ -650,6 +660,17 @@
 		<entity name="ZombiePrisoner" />
 		<entity name="ZombiePrisonGuard" prob="0.2" />
 	</entitygroup>
+	
+	<entitygroup name="FatZombieHoardGroup">
+		<entity name="zombieFatHawaiian" />
+		<entity name="zombieFemaleFat" />
+		<entity name="zombieMoe" />
+		<entity name="zombieFatCop" prob="0.02" />
+	</entitygroup>
+	
+	<entitygroup name="BurntZombieHoardGroup">
+		<entity name="zombieBurnt" />
+	</entitygroup>
 
 	<entitygroup name="ZombieAnimalsGroup">
 		<entity name="animalZombieDog"  prob="4"/>
@@ -661,16 +682,16 @@
 	</entitygroup>
 
 	<entitygroup name="BanditGroup">
-		<entity name="banditMelee" />
-		<entity name="BanditBilly" />
-		<entity name="BanditMichelle" />
-		<entity name="banditRanged" />
-		<entity name="BanditSasha" />
-		<entity name="BanditDwarfSherry" />
-		<entity name="BanditRoger" prob="0.2"/>
-		<entity name="banditLeader" prob="0.2"/>
-		<entity name="BanditKane" prob="0.1"/>
-		<entity name="BanditShahala" prob="0.05"/>
+		<entity name="npcBanditMichael" prob="0.1" />
+		<entity name="npcBanditBilly" prob="0.1" />
+		<entity name="npcBanditMichelle" prob="0.1" />
+		<entity name="npcBanditDrake" prob="0.1" />
+		<entity name="npcBanditSasha" prob="0.1" />
+		<entity name="npcBanditDwarfSherry" prob="0.1" />
+		<entity name="npcBanditRoger" prob="0.09"/>
+		<entity name="npcBanditLeaderPete" prob="0.05"/>
+		<entity name="npcBanditKane" prob="0.05"/>
+		<entity name="npcBanditShahala" prob="0.025"/>
 	</entitygroup>
 
 	<entitygroup name="SupplyCrates_General">

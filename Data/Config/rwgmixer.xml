@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rwgmixer>  <!-- for COMPOPACK 28 -->
+<rwgmixer>  <!-- for COMPOPACK 29 -->
 	<world ruleset="vanilla" />
 	
 	<rulesets>
@@ -16,10 +16,11 @@
 			<path_material value="asphalt" /> 
 			<path_radius value="10" />
 
+			<hub_rule name="asiatown" prob="0.2"/>
 			<hub_rule name="townSmall" prob="0.3"/>
-			<hub_rule name="townLarge" prob="0.3"/>
-			<hub_rule name="citySmall" prob="0.15"/>
-			<hub_rule name="cityLarge" prob="0.1"/>
+			<hub_rule name="townLarge" prob="0.2"/>
+			<hub_rule name="citySmall" prob="0.2"/>
+			<hub_rule name="cityLarge" prob="0.2"/>
 			<hub_rule name="rural" prob="0.3"/>
 			
 			<wilderness_rule name="wildernessDefault"/>
@@ -36,8 +37,32 @@
 		</cell_rule>
 		
 	</cell_rules>
+
+
 	
 	<hub_rules>
+	
+		<hub_rule name="asiatown">
+			<hub_type value="town"/>
+			<width value="200, 250" />
+			<height value="200, 250" />
+			<path_material value="asphalt" /> 
+			<path_radius value="10" />
+
+			<prefab_rule name="asiatownPOIS"/>
+			
+			<street_gen level="15" length_multiplier="4">
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
+			</street_gen>
+		</hub_rule>	
+	
+	
 		<hub_rule name="ruralSmall">
 			<hub_type value="rural"/>
 			<width value="168, 250" />
@@ -48,13 +73,13 @@
 			<prefab_rule name="default"/>
 			
 			<street_gen level="10" length_multiplier="4">
-				<axiom value="[FF*L]+[FFJK]+[FF*L]+[FFJK]"/>
-				<rule char="J" replace_with="[KYX*]"/>
-				<rule char="K" replace_with="[F+F-F]"/>
-				<rule char="L" replace_with="[*F]"/>
-				<rule char="Y" replace_with="-FF[YX]*"/>
-				<rule char="X" replace_with="+FF[XY]*"/>
-				<alt_commands chars="J,K,L,Y,X"/>
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
 			</street_gen>
 		</hub_rule>
 		
@@ -68,13 +93,13 @@
 			<prefab_rule name="default"/>
 			
 			<street_gen level="15" length_multiplier="4">
-				<axiom value="[FF*L]+[FFJK]+[FF*L]+[FFJK]"/>
-				<rule char="J" replace_with="[KYX*]"/>
-				<rule char="K" replace_with="[F+F-F]"/>
-				<rule char="L" replace_with="[*F]"/>
-				<rule char="Y" replace_with="-FF[YX]*"/>
-				<rule char="X" replace_with="+FF[XY]*"/>
-				<alt_commands chars="J,K,L,Y,X"/>
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
 			</street_gen>
 		</hub_rule>
 		
@@ -88,13 +113,13 @@
 			<prefab_rule name="default"/>
 			
 			<street_gen level="15" length_multiplier="4">
-				<axiom value="[FF*L]+[FFJK]+[FF*L]+[FFJK]"/>
-				<rule char="J" replace_with="[KYX*]"/>
-				<rule char="K" replace_with="[F+F-F]"/>
-				<rule char="L" replace_with="[*F]"/>
-				<rule char="Y" replace_with="-FF[YX]*"/>
-				<rule char="X" replace_with="+FF[XY]*"/>
-				<alt_commands chars="J,K,L,Y,X"/>
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
 			</street_gen>
 		</hub_rule>
 		
@@ -108,13 +133,13 @@
 			<prefab_rule name="default"/>
 			
 			<street_gen level="20" length_multiplier="4">
-				<axiom value="[FF*L]+[FFJK]+[FF*L]+[FFJK]"/>
-				<rule char="J" replace_with="[KYX*]"/>
-				<rule char="K" replace_with="[F+F-F]"/>
-				<rule char="L" replace_with="[*F]"/>
-				<rule char="Y" replace_with="-FF[YX]*"/>
-				<rule char="X" replace_with="+FF[XY]*"/>
-				<alt_commands chars="J,K,L,Y,X"/>
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
 			</street_gen>
 		</hub_rule>
 		
@@ -124,17 +149,18 @@
 			<height value="600, 800" />
 			<path_material value="asphalt" /> 
 			<path_radius value="10" />
+			<downtown_zone_size_perc value="0.45"/>
 			
 			<prefab_rule name="default"/>
 			
 			<street_gen level="20" length_multiplier="4">
-				<axiom value="[FF*L]+[FFJK]+[FF*L]+[FFJK]"/>
-				<rule char="J" replace_with="[KYX*]"/>
-				<rule char="K" replace_with="[F+F-F]"/>
-				<rule char="L" replace_with="[*F]"/>
-				<rule char="Y" replace_with="-FF[YX]*"/>
-				<rule char="X" replace_with="+FF[XY]*"/>
-				<alt_commands chars="J,K,L,Y,X"/>
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
 			</street_gen>
 		</hub_rule>
 		
@@ -149,13 +175,13 @@
 			<prefab_rule name="default"/>
 			
 			<street_gen level="25" length_multiplier="4">
-				<axiom value="[FF*L]+[FFJK]+[FF*L]+[FFJK]"/>
-				<rule char="J" replace_with="[KYX*]"/>
-				<rule char="K" replace_with="[F+F-F]"/>
-				<rule char="L" replace_with="[*F]"/>
-				<rule char="Y" replace_with="-FF[YX]*"/>
-				<rule char="X" replace_with="+FF[XY]*"/>
-				<alt_commands chars="J,K,L,Y,X"/>
+				<axiom value="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN][F-FF+FF[-T]FF+FF+FFFF-FF-FF[+I]FF-F[+N]"/>
+
+				<rule char="T" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="I" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="N" replace_with="F-FF+FF[-T**]FF+FF+FFFF-FF-FF[+I**]FF-F[+N*K]"/>
+				<rule char="K" replace_with="[FFCT][-FFT][+FFI][--FFN][+FFT][-FFI][++FN]"/>
+				<alt_commands chars="T,I,N,K"/>
 			</street_gen>
 		</hub_rule>
 		
@@ -165,7 +191,6 @@
 
 			<prefab_rule name="town"/>
 		</hub_rule>
-
 	</hub_rules>
 	
 	<wilderness_rules>
@@ -178,7 +203,45 @@
 	</wilderness_rules>
 	
 	<prefab_rules>
-		<prefab_rule name="none"/>
+		<prefab_rule name="none"/>	
+
+
+
+		<prefab_rule name="asiatownPOIS">
+			<prefab name="xcostum_Asia_Apartments(by_magoli)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_ChineseMarket(by_magoli)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_Dojo(by_RedLotus)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_KhooKongsi(by_StompyNZ)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_KungFuSchool(by_magoli)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_Livinghouse_sm_01(by_magoli)" min_count="1" max_count="3" />
+			<prefab name="xcostum_Asia_ModernCottage_01(by_StompyNZ)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_Pagoda(by_RedLotus)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_Pagoda_sm_01(by_magoli)" min_count="1" max_count="2" />			
+			<prefab name="xcostum_Asia_Restaurant(by_Redlotus)" min_count="1" max_count="1" />
+			<prefab name="xcostum_Asia_Restaurant_city(by_Redlotus)" min_count="1" max_count="1" />
+			<prefab name="xcostum_Asia_Swordmaster(by_magoli)" min_count="1" max_count="1" />
+			<prefab name="xcostum_Asia_Temple9Powermonks(by_magoli)" min_count="1" max_count="2" />
+			<prefab name="xcostum_Asia_TempleMiddleVillage(by_SylenThunder)" min_count="1" max_count="1" />
+			<prefab name="xcostum_Asia_ChineseGate(by_XXX)" />
+			<prefab name="trailer_01" max_count="1" />
+			<prefab name="trailer_02" max_count="1" />
+			<prefab name="trailer_03" max_count="1" />
+			<prefab name="trailer_04" max_count="1" />
+			<prefab name="trailer_park_01" max_count="1" />
+			<prefab name="garageyellow1" max_count="1" />
+			<prefab name="garagewhite1" max_count="1" />
+			<prefab name="garagetan1" max_count="1" />
+			<prefab name="garagestucco1" max_count="1" />
+			<prefab name="store_book_lg_01" prob="0.6" max_count="1" />
+			<prefab name="xcostum_Flagstonemansion_sm(by_elitelex)" max_count="1" />			
+			<prefab name="store_pharmacy_sm_01" max_count="1" />
+			<prefab name="parking_lot_03" max_count="1"/>
+			<prefab name="xvanilla_Trailerhousemix03" max_count="1" />			
+		</prefab_rule>
+
+
+
+
 		
 		<prefab_rule name="default">
 			<prefab rule="residentialOldGroup"/>
@@ -346,11 +409,11 @@
 		</prefab_rule>
 		
 		<prefab_rule name="commercialGroup">	
-			<prefab name="store_gun_sm_01" min_count="1" max_count="1" />
+			<prefab name="store_gun_sm_01" min_count="1" max_count="2" />
 			<prefab name="store_gun_lg_01" min_count="1" max_count="1" />
 			<prefab name="store_pharmacy_sm_01" max_count="1" />
-			<prefab name="store_hardware_sm_01" prob="1" max_count="1" />
-			<prefab name="store_hardware_lg_01" prob="1" max_count="1" />
+			<prefab name="store_hardware_sm_01" prob="1" min_count="1" max_count="2" />
+			<prefab name="store_hardware_lg_01" prob="1" min_count="1" max_count="1" />
 			<prefab name="store_book_sm_01" prob="0.8" max_count="1" />
 			<prefab name="store_book_lg_01" prob="0.6" max_count="1" />
 			<prefab name="store_grocery_lg_01" prob="0.6" max_count="1" />
@@ -408,7 +471,10 @@
 			<prefab name="dwalls_Store_Pharmacy" max_count="1" />
 			<prefab name="dwalls_Store_Pharmacy_2" max_count="1" />
 			<prefab name="xcostum_storeset1(by_Guppycur)" max_count="1" />
-			<prefab name="xcostum_storeset2(by_Guppycur)" max_count="1" />		
+			<prefab name="xcostum_storeset2(by_Guppycur)" max_count="1" />
+			<prefab name="xcostum_Paintballarena(by_Jackelmyer)" max_count="1" />
+			<prefab name="xcostum_PetStore(by_Jackelmyer)" max_count="1" />
+			<prefab name="xcostum_BoxingGym(by_KamR)" max_count="1" />																	
 		</prefab_rule>
 		
 		<prefab_rule name="downtownGroup">
@@ -480,6 +546,9 @@
 			<prefab name="dwalls_Store_Pharmacy_2" max_count="1" />
 			<prefab name="xcostum_Hightop(by_Curbolt)" max_count="1" />			
 			<prefab name="xcostum_UnionStation(by_BuLLeTZ)" max_count="1" />
+			<prefab name="xcostum_PetStore(by_Jackelmyer)" max_count="1" />			
+			<prefab name="xcostum_BoxingGym(by_KamR)" max_count="1" />
+			<prefab name="xcostum_shootingrange(by_magoli)" max_count="1" />			
 
 		<!--	<prefab name="xcostum_CityCombo01(by_Stallionsden)" max_count="1" />
 			<prefab name="xcostum_CityCombo02(by_Stallionsden)" max_count="1" />
@@ -538,6 +607,7 @@
 			<prefab name="installation_red_mesa" max_count="1"/>
 			<prefab name="sawmill_01_snow" max_count="1"/>
 			<prefab name="utility_celltower_01" max_count="1"/>
+			<prefab name="utility_celltower_02" max_count="1"/>
 			<prefab name="junkyard_lg_01" max_count="1" />
 			<prefab name="junkyard_med_01" max_count="1" />
 			<prefab name="vacant_lot_med_01" max_count="1" />
@@ -579,6 +649,7 @@
 			<prefab name="xcostum_CountyJail(by_Volar)" max_count="1" />
 			<prefab name="xcostum_Plant(by_Wsiegel)" max_count="1" />
 			<prefab name="xcostum_Windowfactory(by_magoli)" max_count="1" />
+			<prefab name="xcostum_shootingrange(by_magoli)" max_count="1" />
 		</prefab_rule>
 
 		
@@ -631,6 +702,9 @@
 			<prefab name="xcostum_Storage(by_ShoNuff)" max_count="1" />
 			<prefab name="xcostum_RestArea_Desert(by_Guppycur)" max_count="1" />
 			<prefab name="xcostum_Wooden_Palisade(by_LuckyStar)" max_count="1" />
+			<prefab name="xcostum_ZombieZoo(by_Wsiegel)" max_count="1" />
+			<prefab name="xcostum_RaceTrack(by_Guppycur)" max_count="1" />
+			<prefab name="xcostum_BoxingGym(by_KamR)" max_count="1" />												
 		</prefab_rule>
 
 
@@ -730,7 +804,7 @@
 			<prefab name="xcostum_icestadium(by_magoli)" max_count="1" prob="0.3"/>
 			<prefab name="xcostum_H0bbit(by_Limodor)" max_count="1" prob="0.2"/>
 			<prefab name="snowy_ski_lodge" max_count="1" prob="0.2"/>
-			<prefab name="xcostum_Chernobyl(by Maz_Burt)" max_count="1" prob="0.2"/>
+			<prefab name="xcostum_Chernobyl(by_Maz_Burt)" max_count="1" prob="0.2"/>
 			<prefab name="xcostum_MiniBikeRaceTrack(by_Spider)" max_count="1" prob="0.3" />	
 			<prefab name="xcostum_nepa_base(by_Eihwaz)" max_count="1" prob="0.2" />	
 			<prefab name="xcostum_TheEstate(by_Ekk0)" max_count="1" prob="0.3" />			
@@ -758,8 +832,10 @@
 			<prefab name="xcostum_CrashedAirplane(by_LazMan)" max_count="1" prob="0.4"/>
 			<prefab name="xcostum_TV_Tower_Restaurant(by_magoli)" max_count="1" prob="0.2" />
 			<prefab name="xcostum_strange_cornfield(by_magoli)" max_count="1" prob="0.2"/>
-			<prefab name="xcostum_swimmingbath(by_magoli)" max_count="1" prob="0.4"/>
+			<prefab name="xcostum_swimmingbath(by_magoli)" max_count="1" prob="0.3"/>
 			<prefab name="xcostum_WulftownCD(by_WereWulfen)" max_count="1" prob="0.2" />
+			<prefab name="xcostum_Sphinx(by_Andyjoki)" max_count="1" prob="0.1" />
+			<prefab name="xcostum_TheVillage(by_Stallionsden)" max_count="1" prob="0.2" />			
 		</prefab_rule>				
 
 		
@@ -826,6 +902,11 @@
 			<prefab name="tree_burntpine_02"/>
 			<prefab name="tree_burntpine_03"/>
 			<prefab name="water_tower_03" />
+
+			<prefab name="vacant_lot_med_01" />
+			<prefab name="vacant_lot_med_02" />
+			<prefab name="vacant_lot_sm_01" />
+			<prefab name="vacant_lot_sm_02" />			
 		</prefab_rule>
 		
 		<prefab_rule name="traderGroup">
@@ -981,7 +1062,7 @@
 			
 			<module name="scaleBiasOutput" type="ScaleBiasOutput">
 				<property name="sourceModule" value="finalLand"/>
-				<property name="scale" value="188"/>
+				<property name="scale" value="182"/>
 			</module>
 
 			<output module="scaleBiasOutput"/>
