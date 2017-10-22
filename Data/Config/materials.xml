@@ -100,7 +100,7 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 	<property name="stepsound" value="water" />
 	<property name="lightopacity" value="3" />
 	<property name="stability_glue" value="0" />
-	<property name="movement_factor" value="1" />
+	<property name="movement_factor" value="3.5" />
 	<property name="Mass" type="int" value="0" />
 </material>
 
@@ -303,6 +303,7 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 	<property name="Mass" type="int" value="10" />
 	<property name="MaxDamage" value="1500" />
 	<property name="Experience" value="3.0"/>
+	<property name="movement_factor" value="2.5" />
 </material>
 
 <material id="Mbridge_metal">
@@ -377,6 +378,20 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 	<property name="MaxDamage" value="500" />
 	<property name="Experience" value="3.0"/>
 </material>
+
+<material id="asphalt">
+	<property name="damage_category" value="stone" />
+	<property name="surface_category" value="stone" />
+	<property name="forge_category" value="stone" />
+	<property name="Hardness" type="float" value="1" />
+	<property name="stepsound" value="stone" />
+	<property name="stability_glue" value="120" />
+	<property name="Mass" type="int" value="10" />
+	<property name="MaxDamage" value="500" />
+	<property name="Experience" value="1.0"/>
+	<property name="movement_factor" value="2.5" />
+</material>
+
 
 <!-- cobblestone and concrete -->
 <material id="Mconcrete">

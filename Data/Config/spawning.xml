@@ -60,8 +60,8 @@
     </biome>
 
     <biome name="wasteland">
-        <spawn maxcount="2" respawndelay="1" time="Day"   entitygroup="ZombiesWastelandwithBandits" />
-        <spawn maxcount="2" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNightwithBandits" />
+        <spawn maxcount="2" respawndelay="1" time="Day"   entitygroup="ZombiesWasteland" />
+        <spawn maxcount="2" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" />
         <spawn maxcount="1" respawndelay="1" time="Any"   entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" />
 
     </biome>
@@ -72,7 +72,7 @@
 		</biome>
 
     <biome name="snow">
-		<spawn maxcount="1" respawndelay="4" time="Any" entitygroup="SnowZombiesPlusSurvivors" />
+		<spawn maxcount="1" respawndelay="4" time="Any" entitygroup="SnowZombies" />
 		<spawn maxcount="1" respawndelay="7" time="Any" entitygroup="EnemyAnimalsSnow" spawnDeadChance="0" />
 		<spawn maxcount="1" respawndelay="7" time="Any" entitygroup="FriendlyAnimalsSnow" spawnDeadChance="0" />
 	</biome>

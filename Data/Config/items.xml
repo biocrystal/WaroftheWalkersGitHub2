@@ -9533,9 +9533,7 @@ Mesh files no longer used:
 	<property name="CreativeMode" value="None" />
 </item>
 
-
-<!--
-<item id="1501" name="superWrench">
+<item id="2000" name="superWrench">
 	<property name="Extends" value="wrench"/>
 	<property name="CustomIcon" value="wrench"/>
 	<property name="CustomIconTint" value="ffa0a0"/>
@@ -9548,7 +9546,7 @@ Mesh files no longer used:
 </item>
 
 
-<item id="1502" name="gunSuperDigger">
+<item id="2001" name="gunSuperDigger">
 	<property name="CustomIcon" value="gunMP5"/>
 	<property name="CustomIconTint" value="ffa0a0"/>
 	<Property name="TintColor" value="255,160,160"/>
@@ -9594,7 +9592,7 @@ Mesh files no longer used:
 	</property>
 	</item>
 
-<item id="1503" name="gunJustDie">
+<item id="2002" name="gunJustDie">
 	<property name="CustomIcon" value="gunPistol"/>
 	<property name="CustomIconTint" value="ffa0a0"/>
 	<Property name="TintColor" value="255,160,160"/>
@@ -9638,7 +9636,7 @@ Mesh files no longer used:
 	</property>
 	</item>
 
-<item id="1504" name="hammerOfGod">
+<item id="2003" name="hammerOfGod">
 	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="clawHammer"/> <property name="CustomIconTint" value="ffa0a0"/>
 	<property name="Meshfile" value="Items/Tools/hammerPrefab"/>
@@ -9662,7 +9660,6 @@ Mesh files no longer used:
 		<property name="DismembermentBaseChance" value="1"/>
 	</property>
 </item>
--->
 
 <!-- War of the Walkers Mod Start -->
 
