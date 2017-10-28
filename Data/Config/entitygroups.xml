@@ -48,14 +48,14 @@
 		<entity name="zombieMoeCrawler" prob="0.1" />
 		<entity name="zombieJoeCrawler" prob="0.1" />
 		<entity name="zombieBoeCrawler" prob="0.1" />
-		<entity name="npcSurvivorBob" prob="0.02" />
+		<!--<entity name="npcSurvivorBob" prob="0.02" />
 		<entity name="npcSurvivorBill" prob="0.02" />
 		<entity name="npcSurvivorSheela" prob="0.02" />
 		<entity name="npcSurvivorEmma" prob="0.02" />
 		<entity name="npcSurvivorKevin" prob="0.02" />
 		<entity name="npcSurvivorLarry" prob="0.02" />
 		<entity name="npcSurvivorHannah" prob="0.02" />
-		<entity name="npcSurvivorZoey" prob="0.05" />
+		<entity name="npcSurvivorZoey" prob="0.05" />-->
 		<entity name="npcTravelingTraderJoel" prob="0.004" />
 		<entity name="npcTravelingTraderRekt" prob="0.004" />
 		<entity name="npcTravelingTraderBob" prob="0.004" />
@@ -161,6 +161,7 @@
 		<entity name="zombieMaleHazmat" prob="0.05" />
 		<entity name="zombieMaleHazmat" prob="0.05" />
 		<entity name="zombieFatHawaiian" />
+		<!--
 		<entity name="npcBanditMichael" prob="0.05" />
 		<entity name="npcBanditBilly" prob="0.05" />
 		<entity name="npcBanditMichelle" prob="0.05" />
@@ -171,6 +172,7 @@
 		<entity name="npcBanditLeaderPete" prob="0.01"/>
 		<entity name="npcBanditKane" prob="0.01"/>
 		<entity name="npcBanditShahala" prob="0.005"/>
+		-->
 	</entitygroup>	
 	
 	<entitygroup name="ZombiesWastelandNightwithBandits">
@@ -194,6 +196,7 @@
 		<entity name="zombieMaleHazmat" prob="0.1" />
 		<entity name="zombieMaleHazmat" prob="0.1" />
 		<entity name="zombieFatHawaiian" />
+		<!--
 		<entity name="npcBanditMichael" prob="0.05" />
 		<entity name="npcBanditBilly" prob="0.05" />
 		<entity name="npcBanditMichelle" prob="0.05" />
@@ -204,6 +207,7 @@
 		<entity name="npcBanditLeaderPete" prob="0.03"/>
 		<entity name="npcBanditKane" prob="0.01"/>
 		<entity name="npcBanditShahala" prob="0.001"/>
+		-->
 	</entitygroup>
 	
 	<entitygroup name="ZombiesAllwithBandits">
@@ -222,6 +226,7 @@
 		<entity name="zombieMoeCrawler" prob="0.2" />
 		<entity name="zombieJoeCrawler" prob="0.2" />
 		<entity name="zombieBoeCrawler" prob="0.2" />
+		<!--
 		<entity name="npcBanditMichael" prob="0.05" />
 		<entity name="npcBanditBilly" prob="0.05" />
 		<entity name="npcBanditMichelle" prob="0.05" />
@@ -232,11 +237,13 @@
 		<entity name="npcBanditLeaderPete" prob="0.03"/>
 		<entity name="npcBanditKane" prob="0.01"/>
 		<entity name="npcBanditShahala" prob="0.001"/>
+		-->
 	</entitygroup>
 	
 	<entitygroup name="ZombiesBurntForestwithBandits">
 		<entity name="zombieBurnt" prob="0.65"/>
 		<entity name="zombieSteveCrawler" prob="0.2"/>
+		<!--
 		<entity name="npcBanditMichael" prob="0.01" />
 		<entity name="npcBanditBilly" prob="0.01" />
 		<entity name="npcBanditMichelle" prob="0.01" />
@@ -247,6 +254,7 @@
 		<entity name="npcBanditLeaderPete" prob="0.005"/>
 		<entity name="npcBanditKane" prob="0.005"/>
 		<entity name="npcBanditShahala" prob="0.0025"/>
+		-->
 	</entitygroup>
 
 	<entitygroup name="ZombiesWastelandNightNoBears">
@@ -362,14 +370,14 @@
 		<entity name="zombieSnow" />
 		<entity name="SnowZombieLarry" />
 		<entity name="SnowZombieSarah" />
-		<entity name="npcSurvivorBob" prob="0.02" />
+		<!--<entity name="npcSurvivorBob" prob="0.02" />
 		<entity name="npcSurvivorBill" prob="0.02" />
 		<entity name="npcSurvivorSheela" prob="0.02" />
 		<entity name="npcSurvivorEmma" prob="0.02" />
 		<entity name="npcSurvivorKevin" prob="0.02" />
 		<entity name="npcSurvivorLarry" prob="0.02" />
 		<entity name="npcSurvivorHannah" prob="0.02" />
-		<entity name="npcSurvivorZoey" prob="0.02" />
+		<entity name="npcSurvivorZoey" prob="0.02" /> -->
 		<entity name="npcTravelingTraderJoel" prob="0.002" />
 		<entity name="npcTravelingTraderRekt" prob="0.002" />
 		<entity name="npcTravelingTraderBob" prob="0.002" />
@@ -432,35 +440,35 @@
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsDesert">
-		<entity name="invisibleAnimal" prob="6" />
+		<entity name="invisibleAnimal" prob="4" />
 		<entity name="animalRabbit" />
 		<entity name="animalChicken" />
 		<entity name="animalBoar" prob="0.4" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsSnow">
-		<entity name="invisibleAnimalEnemy" prob="6" />
+		<entity name="invisibleAnimalEnemy" prob="4" />
 		<entity name="animalZombieVulture" prob="0.4" />
 		<entity name="animalDireWolf" prob="0.05" />
 		<entity name="animalBear" prob="0.05" />
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsSnow">
-		<entity name="invisibleAnimal" prob="3" />
+		<!-- <entity name="invisibleAnimal" prob="3" /> -->
 		<entity name="animalRabbit" />
 		<entity name="animalBoar" prob="0.4" />
 		<entity name="animalStag" prob="0.4" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsForest">
-		<entity name="invisibleAnimalEnemy" prob="6" />
+		<entity name="invisibleAnimalEnemy" prob="4" />
 		<entity name="animalWolf" prob="0.4" />
 		<entity name="animalBear" prob="0.05" />
 		<entity name="animalDireWolf" prob="0.05" />
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsForest">
-		<entity name="invisibleAnimal" prob="3" />
+		<!-- <entity name="invisibleAnimal" prob="3" />  -->
 		<entity name="animalRabbit" />
 		<entity name="animalBoar" prob="0.4" />
 		<entity name="animalStag" prob="0.4" />
@@ -473,7 +481,7 @@
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsBurntForest">
-		<entity name="invisibleAnimal" prob="6" />
+		<!-- <entity name="invisibleAnimal" prob="6" /> -->
 		<entity name="animalChicken" />
 		<entity name="animalStag" prob="0.4" />
 		<entity name="animalBoar" prob="0.4" />
@@ -487,7 +495,7 @@
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsPlains">
-		<entity name="invisibleAnimal" prob="6" />
+		<!-- <entity name="invisibleAnimal" prob="6" /> -->
 		<entity name="animalRabbit" />
 		<entity name="animalChicken" />
 		<entity name="animalBoar" />
@@ -502,8 +510,8 @@
 		<entity name="animalSnake" />
 		<entity name="animalZombieVulture" />
 		<entity name="animalWolf" />
-		<entity name="animalDireWolf" prob="0.05" />
-		<entity name="animalBear" prob="0.1" />
+		<entity name="animalDireWolf" prob="0.15" />
+		<entity name="animalBear" prob="0.15" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsWasteland" >
@@ -681,6 +689,7 @@
 	</entitygroup>
 
 	<entitygroup name="BanditGroup">
+		<!-- 
 		<entity name="npcBanditMichael" prob="0.1" />
 		<entity name="npcBanditBilly" prob="0.1" />
 		<entity name="npcBanditMichelle" prob="0.1" />
@@ -691,6 +700,7 @@
 		<entity name="npcBanditLeaderPete" prob="0.05"/>
 		<entity name="npcBanditKane" prob="0.05"/>
 		<entity name="npcBanditShahala" prob="0.025"/>
+		-->
 	</entitygroup>
 
 	<entitygroup name="SupplyCrates_General">
