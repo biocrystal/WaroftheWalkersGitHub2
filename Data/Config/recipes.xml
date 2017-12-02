@@ -5283,6 +5283,15 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="BlueprintPaper" count="8"/>
 </recipe>
 
+<!-- Custom -->
+<recipe name="Dye" count="1" craft_area="chemistryStation">
+    <ingredient name="blueberries" count="1"/>
+    <ingredient name="goldenrodPlant" count="1"/>
+    <ingredient name="chrysanthemumPlant" count="1"/>
+    <ingredient name="HouseholdChemicals" count="1"/>
+    <ingredient name="bottledRiverWater" count="1"/>
+</recipe>
+
 </recipes>
 <!-- To do (maybe / later)
 <recipe name="steelArrowHead" count="1" craft_area="forge" craft_tool="calipers" material_based="true">
